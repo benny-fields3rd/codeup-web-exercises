@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Veridiyan Dynamics Forms</title>
+    </head>
+    <body>
+        <form method="POST" action="http://requestbin.fullcontact.com/zs2r3tzs">
+            <h2>User Registration</h2>
+            <p>
+                <label for="email">Email:</label>
+                <input id="email" type="text" name="email" placeholder="Enter your email address.">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input id="password" type="text" name="password" placeholder="Enter password here.">
+            </p>
+            <p>
+                <label for="bio">Short Bio:<br></label>
+                <textarea id="bio" name="bio">Please enter a short bio about yourself.</textarea>
+            </p>
+            <h2>How did you hear about us?</h2>
+            <p>
+                Please select from one of the following:
+            </p>
+            <p>
+                <label for="about1"><input type="checkbox" id="about1" name="about[]" value="Billboard">Billboard</label>
+                <label for="about2"><input type="checkbox" id="about2" name="about[]" value="Radio Advertisement">Radio Advertisement</label>
+                <label for="about3"><input type="checkbox" id="about3" name="about[]" value="Internet Advertisement">Internet Advertisement</label>
+                <label for="about4"><input type="checkbox" id="about4" name="about[]" value="Other">Other</label>
+            </p>
+            <p>
+            <h2>Browser Info</h2>
+                <label for="browser">What web browser are you using?</label>
+                    <select id="browser" name="browser[]" multiple>
+                        <option selected value="chrome"> Google Chrome</option>
+                        <option value="safari">Apple Safari</option>
+                        <option value="edge">Microsoft Edge</option>
+                        <option value="firefox">Mozilla Firefox</option>
+                        <option value="other">Other</option>
+                    </select>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+    </body>
+</html>
