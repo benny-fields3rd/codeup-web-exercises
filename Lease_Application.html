@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Residential Lease Application</title>
+    </head>
+    <body>
+        <form method="POST" action="http://requestbin.fullcontact.com/zs2r3tzs">
+        <header>
+            <img src="img/tex_realtors.png" alt="texas association of realtor logo">
+            <h1>RESIDENTIAL LEASE APPLICATION</h1>
+            <p>USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORS IS NOT AUTHORIZED.</p>
+            <P><strong>Texas Association of REALTORS&reg;, Inc. 2007</strong></P>
+            <h3>Each occupant and co-applicatn 18 years or older must submit a separate application.</h3>
+            <hr>
+        </header>
+        <main>
+            <section>
+                <p>
+                    <label for="propertyaddress">Property Address:</label>
+                    <input id="propertyaddress" name="propertyaddress" type="text" placeholder="Property Address here.">
+                </p>
+                <p>
+                    Anticipated: <label for="moveInDate">Move-in Date:</label>
+                    <input id="moveInDate" name="moveInDate" type="text" placeholder="Move-in date goes here.">
+                    <label for="rent">Monthly Rent: $</label>
+                    <input id="rent" name="rent" type="text" placeholder="Monthly rent goes here.">
+                    <label for="securityDeposit">Security Deposit: $</label>
+                    <input id="securityDeposit" name="securityDeposit" type="text" placeholder="Security deposit goes here.">
+                </p>
+            </section>
+
+                <p>
+                    Applicant was referred to Landlord by:
+                </p>
+                <p>
+                    <label><input type="checkbox" id="refer1" name="refer[]" value="reAgent">Real estate agent <label for="agentName">Agent name:</label>
+                        <input id="agentName" name="agentName" type="text" placeholder="Agent's Name">
+                        <label for="agentPhone">Agent phone number:</label>
+                        <input id="agentPhone" name="agentPhone" type="text" placeholder="Agents phone number."></label>
+                </p>
+                    <label><input type="checkbox" id="refer2" name="refer[]" value="newspaper">Newspaper</label>
+                    <label><input type="checkbox" id="refer3" name="refer[]" value="sign">Sign</label>
+                    <label><input type="checkbox" id="refer4" name="refer[]" value="internet">Internet</label>
+                    <label><input type="checkbox" id="refer5" name="refer[]" value="other">Other</label>
+                <p>
+                    <label for="to">To:</label>
+                    <input id="to" name="to" type="text" placeholder="Receiver's email">
+                </p>
+                <p>
+                    <label for="from">From:</label>
+                    <input id="from" name="from" type="text" placeholder="Senders email">
+                </p>
+                <p>
+                    <label for="subject">Subject:</label>
+                    <input id="subject" name="subject" type="text" placeholder="subject">
+                </p>
+                <p>
+                    <label for="message">Message:</label>
+                    <textarea id="email_content" name="email_content" rows="5" cols="60">Compose message here.</textarea>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+                <input type="checkbox" id="saveCopy" name="saveCopy" value="ues" checked>
+                <label for="saveCopy">Save a copy to your sent folder?</label>
+                <button type="submit">Submit</button>
+
+            <h2>Multiple Choice Test</h2>
+
+                <p>
+                    What of the following does Honda make?
+                </p>
+                <label>
+                    <input type="radio" name="q1" value="Accord">Accord
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="Maxima">Maxima
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="Tundra">Tundra
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="F150">F150
+                </label>
+                <p>
+                    What of the following does Tesla make?
+                </p>
+                <label>
+                    <input type="radio" name="q2" value="Outlook">Outlook
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="Model S">Model S
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="RX 350">RX 350
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="Cherokee">Cherokee
+                </label>
+                <p>
+                    Which of the following are cities in Texas?
+                </p>
+                <label><input type="checkbox" id="cities1" name="cities[]" value="Miami"> Miami</label>
+                <label><input type="checkbox" id="cities2" name="cities[]" value="Austin"> Austin</label>
+                <label><input type="checkbox" id="cities3" name="cities[]" value="San Antonio"> San Antonio</label>
+                <label><input type="checkbox" id="cities4" name="cities[]" value="Houston"> Houston</label>
+                <label><input type="checkbox" id="cities5" name="cities[]" value="St. Louis"> St. Louis</label>
+                <div>
+                    <label for="carType">What type of car do you prefer?</label>
+                    <select id="carType" name="carType[]" multiple>
+                        <option value="suv">SUV</option>
+                        <option value="pickup">Pickup</option>
+                        <option value="cuv">CUV</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                </div>
+                <h2>Select Testing</h2>
+
+                    <label for="coding">Do you enjoy coding?</label>
+                    <select id="coding" name="coding">
+                        <option selected value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <p>
+                        <button type="submit">Submit</button>
+                    </p>
+        </main>
+        </form>
+    </body>
+</html>
