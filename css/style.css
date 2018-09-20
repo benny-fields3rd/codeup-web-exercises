@@ -1,26 +1,36 @@
+/*Body
+---------------------------------------------------*/
+body {
+    background-color: #6495ed;
+    background-image: url("../img/Nimvelo.jpg");
+    font-family: 'Varela Round', serif;
+    /*color: #4776E6;*/
+}
+
 .fancy-header {
-    color: purple; /* single line comment */
-    text-decoration: underline;
-    text-align: center;
+    color: #0ABFBC; /* single line comment */
+text-decoration: underline;
+text-align: center;
 }
 
 h2 {
-    color: #92b4f2;
-}
-
-body {
-    background-color: #6495ed;
-    background-image: url("img/oriental.png");
-    font-family: 'Varela Round';
+    color: #fff;
 }
 
 ul {
     list-style: square;
 }
 
+td, tr {
+    padding: 10px;
+    font-size: 20px;
+}
+
+/*Footer
+--------------------------------------*/
 /* unvisited link (:link) */
 a:link {
-    color:#0000ff;
+    color:#fbc7d4;
 }
 /* visited link (:visited) */
 a:visited {
@@ -28,14 +38,10 @@ a:visited {
 }
 /* mouse hover over link (:hover) */
 a:hover {
-    color:#008000;
+    color:#D7DDE8;
 }
 /* active or selected link (:active) */
 a:active {
     color:#ffff00;
 }
 
-td, tr {
-    padding: 10px;
-    font-size: 20px;
-}
