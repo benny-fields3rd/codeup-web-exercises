@@ -7,7 +7,13 @@
     <body>
         <form method="POST" action="https://http-inspector.glitch.me/">
         <header>
-            <img src="img/tex_realtors.png" alt="texas association of realtor logo">
+            <img src="img/tex_realtors.jpeg" alt="texas association of realtor logo">
+            <p>
+                <label for="received">Received on:</label>
+                <input id="received" name="received" type="date" placeholder="Received date.">
+                <label for="time">Monthly Rent: $</label>
+                <input id="time" name="time" type="datetime-local" placeholder="Time received." size="35">
+            </p>
             <h1>RESIDENTIAL LEASE APPLICATION</h1>
             <p>
                 USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION
@@ -746,13 +752,13 @@
                     <input id="position" name="position" type="text" placeholder="Position" size="35">
             </section>
             </main>
-                <footer>
+            <footer>
                 <p>
                 <input type="checkbox" id="sendCopy" name="sendCopy" value="ues" checked>
                 <label for="sendCopy">Send a copy to your e-mail?</label>
                 <button type="submit">Submit</button>
                 </p>
-                </footer>
+            </footer>
         </form>
     </body>
 </html>
