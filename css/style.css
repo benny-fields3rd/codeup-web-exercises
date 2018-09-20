@@ -1,4 +1,41 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+h2 {
+    color: #92b4f2;
+}
+
+body {
+    background-color: #6495ed;
+    background-image: url("img/oriental.png");
+    font-family: 'Varela Round';
+}
+
+ul {
+    list-style: square;
+}
+
+/* unvisited link (:link) */
+a:link {
+    color:#0000ff;
+}
+/* visited link (:visited) */
+a:visited {
+    color:#800080;
+}
+/* mouse hover over link (:hover) */
+a:hover {
+    color:#008000;
+}
+/* active or selected link (:active) */
+a:active {
+    color:#ffff00;
+}
+
+td, tr {
+    padding: 10px;
+    font-size: 20px;
 }
