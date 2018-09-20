@@ -5,7 +5,7 @@
         <title>Residential Lease Application</title>
     </head>
     <body>
-        <form method="POST" action="http://requestbin.fullcontact.com/zs2r3tzs">
+        <form method="POST" action="https://http-inspector.glitch.me/">
         <header>
             <img src="img/tex_realtors.png" alt="texas association of realtor logo">
             <h1>RESIDENTIAL LEASE APPLICATION</h1>
@@ -18,7 +18,7 @@
             <h3>Each occupant and co-applicant 18 years or older must submit a separate application.</h3>
             <hr>
         </header>
-        <>
+
             <section>
                 <p>
                     <label for="propertyaddress">Property Address:</label>
@@ -424,7 +424,7 @@
                         <option value="Zimbabwe">Zimbabwe</option>
                     </select>(country)
 
-            <section>
+            </section>
             <h2>Emergency Contact Information</h2>
                 <label for="contactER">Name:</label>
                 <input id="contactER" name="contactER" type="text" placeholder="Emergency contact" size="35">
@@ -565,7 +565,9 @@
                 <label for="reason1">Reason for move:</label>
                 <textarea id="reason1" name="reason1" rows="5" cols="60">Compose message here.</textarea>
             </section>
+
             <section>
+                <p>
                 <label for="previousAddress"><strong>Applicant's Previous Address:</strong></label>
                 <input id="previousAddress" name="previousAddress" type="text" placeholder="Previous address" size="45">
                 <br>
@@ -662,7 +664,7 @@
                 <label for="reason2">Reason for move:</label>
                 <textarea id="reason2" name="reason2" rows="5" cols="60">Compose message here.</textarea>
             </section>
-                <section>
+            <section>
                 <h2>Applicant's Employment Information</h2>
                     <label for="employer"><strong>Applicant's Current Employer:</strong></label>
                     <input id="employer" name="employer" type="text" placeholder="Current employer" size="45">
@@ -742,16 +744,15 @@
                     <input id="gross" name="gross" type="text" placeholder="Gross monthly" size="15">
                     <label for="position">Position</label>
                     <input id="position" name="position" type="text" placeholder="Position" size="35">
-                </section>
+            </section>
             </main>
                 <footer>
                 <p>
-                <input type="checkbox" id="saveCopy" name="saveCopy" value="ues" checked>
-                <label for="saveCopy">Send a copy to your e-mail?</label>
+                <input type="checkbox" id="sendCopy" name="sendCopy" value="ues" checked>
+                <label for="sendCopy">Send a copy to your e-mail?</label>
                 <button type="submit">Submit</button>
                 </p>
                 </footer>
-
         </form>
     </body>
 </html>
