@@ -13,12 +13,16 @@ body, html {
 form {
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
+    padding: 1em;
 }
 
 fieldset {
     -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    border: 0;
+    padding: 1em;
+    background: #ffffff;
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
@@ -27,15 +31,20 @@ fieldset {
 .width-80 {
     /* The element with this class should 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
+    width: 80%;
+    margin: 0 auto;
 }
 
 .form-group {
     /* This element must use 100% of the width */
     /* It should have a separation of .5em from elements on top of it and below it*/
+    width: 100%;
+    padding: .5em .5em;
 }
 
 .form-label {
     /* The text of a label must be bold */
+    font-weight: bold;
 }
 
 .form-control {
@@ -46,6 +55,7 @@ fieldset {
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
     width: 100%;
+
 }
 
 .btn {
