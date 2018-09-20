@@ -3,7 +3,7 @@
 body {
     background-color: #6495ed;
     background-image: url("../img/Nimvelo.jpg");
-    font-family: 'Varela Round', serif;
+    font-family: 'Varela', sans-serif;
     /*color: #4776E6;*/
 }
 
@@ -15,16 +15,26 @@ text-align: center;
 
 h2 {
     color: #fff;
+    text-align: center;
+}
+
+.img {
+    width: 500px;
+    height: 300px;
 }
 
 ul {
     list-style: square;
 }
 
-td, tr {
-    padding: 10px;
-    font-size: 20px;
+table, td, tr {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #0abfbc;
+    padding: 1em;
+    font-size: 1em;
 }
+
 
 /*Footer
 --------------------------------------*/
@@ -45,3 +55,6 @@ a:active {
     color:#ffff00;
 }
 
+/* can be used to keep padding and border, etc, but shrinks content area.
+box-sizing: border-box;
+ */
