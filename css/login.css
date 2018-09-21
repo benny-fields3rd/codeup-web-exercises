@@ -12,36 +12,40 @@ body, html {
 
 form {
     /* This form should be separated from other elements by 1em */
+    margin: 1em;
+
     /* There must be 1em between the content and the border of this element */
     padding: 1em;
-    margin: 1em;
 }
 
 fieldset {
-    /* There must be 1em between the content and the border of this element */
-    /* It should have no border */
-    /* Its background should be white */
     -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    border: 0;
-    padding: 1em;
-    background: #fff;
 
+    /* There must be 1em between the content and the border of this element */
+    padding: 1em;
+
+    /* It should have no border */
+    border: 0;
+
+    /* Its background should be white */
+    background: #fff;
 }
 
 .width-80 {
     /* The element with this class should 80% of the width and it must be centered */
-    /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
     width: 80%;
-    margin: 0 auto;
 
+    /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
+    margin: 0 auto;
 }
 
 .form-group {
     /* This element must use 100% of the width */
-    /* It should have a separation of .5em from elements on top of it and below it*/
     width: 100%;
+
+    /* It should have a separation of .5em from elements on top of it and below it*/
     margin: .5em 0;
 }
 
@@ -52,26 +56,28 @@ fieldset {
 
 .form-control {
     /* There must be 4px on top of the text and below the text of an input with this class */
+    padding: 4px 0;
+
     /* It should have a separation of .5em from elements on top of it and below it */
+    margin: .5em 0;
 
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
     width: calc(100% - 4px);
-    padding: 4px 0;
-    margin: .5em 0;
 }
 
 .btn {
-    /* There must be a separation of 8px between the text and the border of this element */
-    /* The text color of this element should be white and bold */
-    /* The text color of this element should be white and bold */
-    /* The border of this element should be 1px, and its color should be light grey */
     background-color: #0fb784;
+    /* There must be a separation of 8px between the text and the border of this element */
     padding: 8px;
-    border: 1px solid lightgray;
+
+    /* The text color of this element should be white and bold */
     color: #fff;
     font-weight: bold;
+
+    /* The border of this element should be 1px, and its color should be light grey */
+    border: 1px solid lightgray;
 }
 
 .btn-block {
