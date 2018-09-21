@@ -5,6 +5,7 @@ body {
     background-image: url("../img/Nimvelo.jpg");
     font-family: 'Varela', sans-serif;
     /*color: #4776E6;*/
+
 }
 
 .fancy-header {
@@ -21,6 +22,10 @@ h2 {
 .img {
     width: 500px;
     height: 300px;
+
+}
+.img-center {
+    text-align: center;
 }
 
 ul {
