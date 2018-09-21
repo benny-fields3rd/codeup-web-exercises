@@ -14,6 +14,7 @@ form {
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
     padding: 1em;
+    margin: 1em;
 }
 
 fieldset {
@@ -41,7 +42,7 @@ fieldset {
     /* This element must use 100% of the width */
     /* It should have a separation of .5em from elements on top of it and below it*/
     width: 100%;
-    padding: .5em 0;
+    margin: .5em 0;
 }
 
 .form-label {
@@ -56,11 +57,9 @@ fieldset {
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
-    width: calc(100% - 8px);
-    padding: .5em 0;
-    margin: 4px 0;
-
-
+    width: calc(100% - 4px);
+    padding: 4px 0;
+    margin: .5em 0;
 }
 
 .btn {
