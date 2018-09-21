@@ -8,30 +8,29 @@ body, html {
 }
 
 .message {
-    border: 2px solid rgb(216, 218, 224);
+    border: 1px solid rgb(216, 218, 224);
     margin: .5em;
     padding: 10px;
     border-radius: 5px;
-    font-weight: bold;
 }
 
 .message-info {
-    background-color: rgb(205, 222, 253);
+    background: rgb(205, 222, 253);
     color: rgb(73, 71, 157);
 }
 
 .message-success {
-    background-color: rgb(208, 242, 219);
+    background: rgb(208, 242, 219);
     color: rgb(42, 123, 75);
 }
 
 .message-warning {
-    background-color: rgb(252, 250, 203);
+    background: rgb(252, 250, 203);
     color: rgb(144, 126, 41);
 }
 
 .message-error {
-    background-color: rgb(249, 211, 215);
+    background: rgb(249, 211, 215);
     color: rgb(143, 48, 71);
 }
 
