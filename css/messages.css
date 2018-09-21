@@ -1,3 +1,4 @@
+/*-------Body------*/
 body, html {
     height: 100%;
     width: 100%;
@@ -7,7 +8,7 @@ body, html {
 }
 
 .message {
-    border: 1px solid rgb(216, 218, 224);
+    border: 2px solid rgb(216, 218, 224);
     margin: .5em;
     padding: 10px;
     border-radius: 5px;
