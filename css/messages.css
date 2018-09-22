@@ -1,4 +1,18 @@
 /*-------Body------*/
+/*
+!*Bonus using CSS variables*!
+:root {
+bg-info: 
+text-info:
+bg-success:
+text-success:
+bg-warning:
+text-warning:
+bg-error:
+text-error:
+}
+}*/
+
 body, html {
     height: 100%;
     width: 100%;
@@ -34,36 +48,3 @@ body, html {
     color: rgb(143, 48, 71);
 }
 
-/*
-!*Bonus using CSS variables*!
-.bg-info {
-    --main-bg-color: rgb(205, 222, 253);
-}
-
-.text-info {
-
-}
-
-.bg-success {
-
-}
-
-.text-success {
-
-}
-
-.bg-warning {
-
-}
-
-.text-warning {
-
-}
-
-.bg-error {
-
-}
-
-.text-error {
-
-}*/

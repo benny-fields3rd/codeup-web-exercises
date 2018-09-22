@@ -5,23 +5,34 @@ body {
     background-image: url("../img/Nimvelo.jpg");
     font-family: 'Varela', sans-serif;
     /*color: #4776E6;*/
+    font-weight: bolder;
 
 }
 
 .fancy-header {
     color: #0ABFBC; /* single line comment */
-text-decoration: underline;
-text-align: center;
+    text-decoration: underline;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    text-transform: uppercase;
+    word-spacing: 1em;
+    letter-spacing: 0.2em;
+    margin: 0;
 }
 
 h2 {
     color: #fff;
     text-align: center;
+    font-size: 30px;
 }
 
 .img {
     width: 500px;
     height: 300px;
+    margin: 1em;
+    border-radius: 10px;
+    opacity: 0.8;
 
 }
 .img-center {
@@ -35,7 +46,7 @@ ul {
 table, td, tr {
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid #0abfbc;
+    border-double: 2px solid #0abfbc;
     padding: 1em;
     font-size: 1em;
 }
