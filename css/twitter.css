@@ -80,7 +80,7 @@ a {
 .timeline {
     float: left;
     margin: 0 .5em;
-    width: calc(100% - 60%);
+    width: calc(100% - 55%);
 }
 
 .who-to-follow {
