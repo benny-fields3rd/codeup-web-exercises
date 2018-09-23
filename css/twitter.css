@@ -74,19 +74,19 @@ a {
 .profile-details {
     float: left;
     margin: 0 .5em;
-    width: calc(100% - 75%);
+    width: calc(25% - 1em);
 }
 
 .timeline {
     float: left;
     margin: 0 .5em;
-    width: calc(100% - 55%);
+    width: calc(50% - 1em);
 }
 
 .who-to-follow {
     float: left;
     margin: 0 .5em;
-    width: calc(100% - 75%);
+    width: calc(25% - 1em);
 }
 
 .profile-entry {
