@@ -37,6 +37,8 @@ a {
 .top-nav {
     background: var(--light-bg);
     width: 100%;
+    position: fixed;
+    z-index: 1000;
 }
 
 .nav {
@@ -60,11 +62,7 @@ a {
     color: var(--link-color);
 }
 
-.top-nav {
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-}
+
 
 .profile {
     background: var(--light-bg);
