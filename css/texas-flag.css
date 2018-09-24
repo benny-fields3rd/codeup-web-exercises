@@ -1,0 +1,40 @@
+.texas {
+    margin: 1em;
+    width: 75em;
+    height: 40em;
+    box-shadow: 1em 1em 1em #888888; /*3 sides and color */
+    /* Using RGB values */
+    /*
+    background: linear-gradient(rgb(255, 255, 255) 50%, rgb(184, 3, 39) 50%);
+    */
+    background: linear-gradient(#fff 50%, #B80327 50%) ;
+    border: 1px solid #888888;
+}
+
+.texas::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+    width: 31%;
+    height: 100.1%;
+    content: '★';
+    font-size: 17.5em;
+    color: #fff;
+    background: rgb(0, 32, 93);
+}
+
+
+.fancy-header {
+    color: #0600bf; /* single line comment */
+    font-family: 'Varela', sans-serif;
+    text-decoration: underline;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    text-transform: uppercase;
+    word-spacing: 1em;
+    letter-spacing: 0.2em;
+    margin: 0;
+    font-weight: bold;
+}

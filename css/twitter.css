@@ -1,3 +1,4 @@
+/*Variables defined*/
 :root {
     --main-bg: #E6ECF0;
     --link-color: #3B94D9;
@@ -19,19 +20,19 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
-header {
-    background-image: url("https://loremflickr.com/1200/300");
-    background-size: cover;
-    min-height: 300px;
-    padding-top: 275px;
+.container {
+    margin: 2em;
 }
 
 a {
     color: var(--link-color);
 }
-
-.container {
-    margin: 2em;
+/*Navigation bar*/
+header {
+    background-image: url("https://loremflickr.com/1200/300");
+    background-size: cover;
+    min-height: 300px;
+    padding-top: 275px;
 }
 
 .top-nav {
@@ -61,30 +62,10 @@ a {
 .nav-link:hover {
     color: var(--link-color);
 }
-
-
-
+/*Profile*/
 .profile {
     background: var(--light-bg);
     height: 80px;
-}
-
-.profile-details {
-    float: left;
-    margin: 0 .5em;
-    width: calc(25% - 1em);
-}
-
-.timeline {
-    float: left;
-    margin: 0 .5em;
-    width: calc(50% - 1em);
-}
-
-.who-to-follow {
-    float: left;
-    margin: 0 .5em;
-    width: calc(25% - 1em);
 }
 
 .profile-entry {
@@ -104,6 +85,24 @@ a {
 .profile-items {
     padding: 0;
     list-style-type: none;
+}
+
+.profile-details {
+    float: left;
+    margin: 0 .5em;
+    width: calc(25% - 1em);
+}
+/*Timeline and who-to-follow*/
+.timeline {
+    float: left;
+    margin: 0 .5em;
+    width: calc(50% - 1em);
+}
+
+.who-to-follow {
+    float: left;
+    margin: 0 .5em;
+    width: calc(25% - 1em);
 }
 
 .btn {
