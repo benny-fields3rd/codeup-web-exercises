@@ -21,7 +21,7 @@ body, html {
 }
 
 .container {
-    margin: 2em;
+    margin-top: 2em;
 }
 
 a {
@@ -87,23 +87,23 @@ header {
     list-style-type: none;
 }
 
-.profile-details {
+.profile-details, .who-to-follow {
     float: left;
     margin: 0 .5em;
     width: calc(25% - 1em);
 }
-/*Timeline and who-to-follow*/
+
 .timeline {
     float: left;
     margin: 0 .5em;
     width: calc(50% - 1em);
 }
 
-.who-to-follow {
+/*.who-to-follow {
     float: left;
     margin: 0 .5em;
     width: calc(25% - 1em);
-}
+}*/
 
 .btn {
     border: 1px solid var(--main-link-color);
