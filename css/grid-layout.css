@@ -1,0 +1,37 @@
+body {
+    background: #ffffff;
+}
+.container {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1200%;
+}
+.row {
+    width:100%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    padding: 10px;
+    border: 1px solid #000000;
+    background: rgb(221, 221, 221);
+    box-sizing: border-box;
+    margin: .5em 0;
+}
+.column.one-half {
+    width: 50%;
+}
+.column.one-third {
+    width: 33.33%;
+}
+.column.one-fourth {
+    width: 25%;
+}
+.column.one-eighth {
+    width: 12.5%;
+    margin-bottom: 2em;
+}
