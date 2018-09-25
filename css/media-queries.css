@@ -1,55 +1,15 @@
-@media screen and (min-width:768px) {
-    body.a {
-        background: blue;
-        display: flex;
-        line-height: 1.4;
-    }
-    .main {
-        float: left;
-        width: 50%;
-    }
-    .sub-section {
-        width: 30%;
-    }
-
-    li {
-        list-style-type: none;
-        background-color: transparent;
-        float: right;
-        position: relative;
-        display: inline-block;
-    }
-    img {
-        width: 30%;
-        float: left;
-        margin-top: 1em;
-        position: center;
-    }
-    .hidden-on-desktop {
-        visibility: hidden;
-    }
-    h1 {
-        position: relative;
-        float: left;
-    }
-}
-
 .alert-info {
     background: rgb(197, 255, 255);
     width: 100%;
     padding: 1em;
     border: 2px solid rgb(204, 210, 210);
     text-align: center;
-
 }
 
 h1 {
     text-align: center;
     width: 100%;
 }
-
-
-
 
 li {
     padding: 1em 0;
