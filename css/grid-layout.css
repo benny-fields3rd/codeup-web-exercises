@@ -6,12 +6,11 @@ body, html, * {
     margin: 0 auto;
     width: 95%;
     max-width: 1200%;
-    border: 1px dashed lime;
-}
+    position: relative;}
 
 .row {
     width:100%;
-    overflow: auto;
+    /*overflow: auto;*/
 }
 
 .row:after {
@@ -22,29 +21,43 @@ body, html, * {
 
 .column {
     float: left;
-    padding: 10px;
+    /*padding: 10px;*/
     border: 1px solid #000000;
     background: rgb(221, 221, 221);
-    margin: .5em 0;
+}
+.full,
+.one-half,
+.one-third,
+.one-fourth,
+.one-sixth,
+.one-eighth,
+.two-thirds {
+    width: 100%;
+}
+@media screen and (min-width:768px) {
+    .one-half {
+        width: 50%;
+    }
+
+    .one-third {
+        width: 33.33%;
+    }
+
+    .one-fourth {
+        width: 25%;
+    }
+
+    .one-sixth {
+        width: 16.66%;
+    }
+
+    .one-eighth {
+        width: 12.5%;
+    }
+
+    .two-thirds {
+        width: 66.6666%;
+    }
 }
 
-.one-half {
-    width: 50%;
-}
 
-.one-third {
-    width: 33.33%;
-}
-
-.one-fourth {
-    width: 25%;
-}
-
-.one-sixth {
-    width: 16.66%;
-}
-
-.one-eighth {
-    width: 12.5%;
-    margin-bottom: 2em;
-}
