@@ -1,34 +1,50 @@
+body, html, * {
+    box-sizing: border-box;
+}
+
 .container {
     margin: 0 auto;
     width: 95%;
     max-width: 1200%;
+    border: 1px dashed lime;
 }
+
 .row {
     width:100%;
+    overflow: auto;
 }
+
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
+
 .column {
     float: left;
     padding: 10px;
     border: 1px solid #000000;
     background: rgb(221, 221, 221);
-    box-sizing: border-box;
     margin: .5em 0;
 }
-.column.one-half {
+
+.one-half {
     width: 50%;
 }
-.column.one-third {
+
+.one-third {
     width: 33.33%;
 }
-.column.one-fourth {
+
+.one-fourth {
     width: 25%;
 }
-.column.one-eighth {
+
+.one-sixth {
+    width: 16.66%;
+}
+
+.one-eighth {
     width: 12.5%;
     margin-bottom: 2em;
 }
