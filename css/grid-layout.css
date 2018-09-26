@@ -1,3 +1,5 @@
+/* Small displays /mobile */
+
 body, html, * {
     box-sizing: border-box;
 }
@@ -6,11 +8,11 @@ body, html, * {
     margin: 0 auto;
     width: 95%;
     max-width: 1200%;
-    position: relative;}
+    position: relative;
+}
 
 .row {
     width:100%;
-    /*overflow: auto;*/
 }
 
 .row:after {
@@ -24,7 +26,10 @@ body, html, * {
     /*padding: 10px;*/
     border: 1px solid #000000;
     background: rgb(221, 221, 221);
+    padding: 1em;
+    margin: .5em 0;
 }
+
 .full,
 .one-half,
 .one-third,
@@ -34,30 +39,15 @@ body, html, * {
 .two-thirds {
     width: 100%;
 }
+
+/* Large displays /desktop */
 @media screen and (min-width:768px) {
-    .one-half {
-        width: 50%;
-    }
-
-    .one-third {
-        width: 33.33%;
-    }
-
-    .one-fourth {
-        width: 25%;
-    }
-
-    .one-sixth {
-        width: 16.66%;
-    }
-
-    .one-eighth {
-        width: 12.5%;
-    }
-
-    .two-thirds {
-        width: 66.6666%;
-    }
+    .one-half {width: 50%;}
+    .one-third {width: 33.33%;}
+    .one-fourth {width: 25%;}
+    .one-sixth {width: 16.66%;}
+    .one-eighth {width: 12.5%;}
+    .two-thirds {width: 66.6666%;}
 }
 
 
