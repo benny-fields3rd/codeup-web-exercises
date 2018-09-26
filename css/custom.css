@@ -1,0 +1,24 @@
+nav {
+    background-color: rgb(247, 247, 247);
+}
+
+.jumbotron {
+    background-image: url("../img/pizza.png");
+}
+
+h1 {
+    background-color: rgba(239, 236, 236, 0.47);
+    color: rgba(0, 0, 0, 0.78);
+}
+
+h2 {
+    margin-bottom: 2em;
+}
+.btn {
+    float: right;
+}
+
+.btn-group {
+    float: right;
+}
+
