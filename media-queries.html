@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/media-queries.css">
+    <link rel="stylesheet" href="css/grid-layout.css">
+    <link rel="stylesheet" href="grid-box  ">
     <!-- adding viewpoint -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Media Queries</title>
 </head>
 <body>
+<main class="container">
     <div class="alert-info hidden-on-desktop">
         <a href="#main">Skip to main content</a>
 
@@ -22,17 +25,26 @@
         </ul>
     </nav>
     <div class="header-img">
-        <img src="img/model3.jpg" alt="Tesla Model 3 photo">
+        <div class="row">
+        <img class="pic" src="img/model3.jpg" alt="Tesla Model 3 photo">
+        </div>
     </div>
+
+    <div class="row">
     <section id="main" class="main">
+        <div class="two-thirds">
         <h2>Main Section</h2>
         <p>Amet lorem accusantium maxime quis iusto. Sit aliquid quidem at animi commodi, iusto harum, non. Accusantium sequi consectetur deleniti soluta tempora. Maxime maiores blanditiis veritatis vitae amet maiores sapiente in?</p>
     </section>
+    </div>
+    <div class="one-eighth">
     <section class="sub-section">
         <h2>Sub-section</h2>
         <p>Amet optio quidem voluptatum neque esse at saepe, reiciendis quaerat architecto unde minima aspernatur harum cum totam non amet soluta. Ea quae odio harum magni ab vitae tenetur. Itaque numquam!</p>
     </section>
-    <footer>
+    </div>
+    </div>
+    <footer class="container">
         <p>(c) 2017 All rights reserved</p>
         <div id="social-media-links">
             <img class="twitter" src="img/twitter_logo.png" alt="">

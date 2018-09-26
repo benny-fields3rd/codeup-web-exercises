@@ -4,33 +4,33 @@ body, html, * {
     box-sizing: border-box;
 }
 
-.container {
-    margin: 0 auto;
-    width: 95%;
-    max-width: 1200%;
-    position: relative;
-}
-
-.row {
-    width:100%;
-}
-
-/*.row:after {*/
-    /*content: "";*/
-    /*display: table;*/
-    /*clear: both;*/
+/*.container {*/
+    /*margin: 0 auto;*/
+    /*width: 95%;*/
+    /*max-width: 1200%;*/
+    /*position: relative;*/
 /*}*/
 
+/*.row {*/
+    /*width:100%;*/
+/*}*/
+
+/*!*.row:after {*!*/
+    /*!*content: "";*!*/
+    /*!*display: table;*!*/
+    /*!*clear: both;*!*/
+/*!*}*!*/
+
 .column {
-    float: left;
+    /*float: left;*/
     /*padding: 10px;*/
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
     background: rgb(221, 221, 221);
-    padding: 1em;
-    margin: .5em 0;
+    /*padding: 1em;*/
+    /*margin: .5em 0;*/
 }
 
-.full,
+.pic,
 .one-half,
 .one-third,
 .one-fourth,
@@ -42,12 +42,13 @@ body, html, * {
 
 /* Large displays /desktop */
 @media screen and (min-width:768px) {
+    .two-thirds {width: 66.6666%;}
     .one-half {width: 50%;}
     .one-third {width: 33.33%;}
     .one-fourth {width: 25%;}
     .one-sixth {width: 16.66%;}
     .one-eighth {width: 12.5%;}
-    .two-thirds {width: 66.6666%;}
+    .one-half-offset {margin-left: 50%;}
 }
 
 

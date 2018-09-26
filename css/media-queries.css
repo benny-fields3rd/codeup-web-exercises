@@ -31,7 +31,7 @@ li {
 }
 
 img {
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .sub-section {
@@ -82,19 +82,19 @@ footer>p {
     }
 
     img {
-        width: 100%;
+        /*width: 100%;*/
     }
 
     section {
         float: left;
     }
     .main {
-        width: 60%;
+        /*width: 60%;*/
     }
 
     .sub-section {
         float: left;
-        width: 30%;
+        /*width: 30%;*/
         margin: 0;
     }
 
