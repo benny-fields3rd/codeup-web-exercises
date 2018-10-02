@@ -26,7 +26,7 @@ confirm("The daily rate is $3. Do you still want to rent the movies?");
 var dailyRateDollars = 3;
 
 var totalCost = (dailyRateDollars * herculesDays) + (dailyRateDollars * littleMermaidDays) + (dailyRateDollars * brotherBearDays);
-    alert('Thank you. Your total is $" + totalCost.toFixed(2) + ".");
+    alert("Thank you. Your total is $" + totalCost.toFixed(2) +  ".");
 
 /**
  * Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different
@@ -48,9 +48,25 @@ var totalWeeklyPay = googlePayPerHour * googleHoursWorked;
     totalWeeklyPay += facebookPayPerHour * facebookHoursWorked;
     totalWeeklyPay += amazonPayPerHour * amazonHoursWorked;
 
-alert('Wow! You worked a total of ' + totalHoursWorked + " hours " +  "and earned a total of " + totalWeeklyPay.toFixed(2) + ".");
+    alert('Wow! You worked a total of ' + totalHoursWorked + " hours " +  "and earned a total of " + totalWeeklyPay.toFixed(2) + ".");
 
+// A student can be enrolled to a class only if the class is not full and the class schedule does not conflict with her current schedule.
+var classIsNotFull = confirm("If class is not full, please confirm?");
 
+var scheduleConflictCurrently = confirm("If current schedule does not conflict with class schedule, please confirm?");
+
+var enrollStudent = classIsNotFull && scheduleConflictCurrently;
+    alert("Congrats! Student enrollment " + enrollStudent);
+
+// A product offer can be applied only if people buys more than 2 items, and the offer has not expired.
+// Premium members do not need to buy a specific amount of products.
+
+var buyMoreThan2Items = confirm("Confirm if you bought more than two items.");
+var offerNotExpired = confirm("Confirm if the offer expired.");
+var premiumMember = confirm("Confirm if member is premium.");
+
+var productOfferApplied = buyMoreThan2Items && offerNotExpired && premiumMember;
+alert("Congratulations. Offer status: " + productOfferApplied);
 
 
 
