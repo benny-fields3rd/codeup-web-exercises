@@ -66,7 +66,7 @@ var offerNotExpired = confirm("Confirm if the offer expired.");
 var premiumMember = confirm("Confirm if member is premium.");
 
 var productOfferApplied = buyMoreThan2Items && offerNotExpired && premiumMember;
-alert("Congratulations. Offer status: " + productOfferApplied);
+    alert("Congratulations. Offer status: " + productOfferApplied);
 
 
 
