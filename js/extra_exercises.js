@@ -113,12 +113,12 @@ var numberOfPizzas = Number(prompt("How many pizzas do you have?"));
 var slicesAmount = Number(prompt("How many slices per pizza?"));
 
 var totalSlices = numberOfPizzas * slicesAmount;
-var slicesPerPerson = Math.round(totalSlices / numberOfPeople);
-var leftOverSlices = Math.round(totalSlices % slicesPerPerson);
+var slicesPerPerson = parseInt(totalSlices / numberOfPeople);
+var leftOverSlices = totalSlices % slicesPerPerson;
 
 alert("There are" + " " + numberOfPeople + " " + "people" + " " + "with" + " " + numberOfPizzas + " " + "pizzas.\n" +
-    "Each person gets" + " " + slicesPerPerson + " " + "pieces of pizza.\n" +
-    "There are" + " " + leftOverSlices + " " + "leftover slices.");
+     "Each person gets" + " " + slicesPerPerson + " " + "pieces of pizza.\n" +
+     "There are" + " " + leftOverSlices + " " + "leftover slice(s).");
 
 // 6. Paint Calculator
 
@@ -134,10 +134,12 @@ alert("There are" + " " + numberOfPeople + " " + "people" + " " + "with" + " " +
 //      Constraints
 // • Use a constant to hold the conversion rate.
 // • Ensure that you round up to the next whole number.
-    var lengthOfRoom = Number(prompt("What is the length of the room in feet?"));
-    var widthOfRoom = Number(prompt("What is the width of the room in feet?"));
-    var totalSqFeet = lengthOfRoom * widthOfRoom;
-    var paintGallonsNeeded = totalSqFeet / 2;
+//     var lengthOfRoom = Number(prompt("What is the length of the room in feet?"));
+// //     var widthOfRoom = Number(prompt("What is the width of the room in feet?"));
+// //     const oneGallonCoversSqFeet = 350;
+// //     var totalSqFeet = lengthOfRoom * widthOfRoom;
+// //     var paintGallonsNeeded = totalSqFeet / 2;
+
 
 
 
