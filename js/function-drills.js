@@ -1,11 +1,14 @@
 // Functions using conditionals but not loops or arrays:
 //
-//     Make a function named isOdd(number)
+// Make a function named isOdd(number)
+function isOdd() {
+    
+}
 // Make a function named isEven(number)
 // Make a function named identity(input) that returns the input exactly as provided.
-//     Make a function named isFive(input)
+// Make a function named isFive(input)
 // Make a function named addFive(input) that adds five to some input.
-//     Make a function named isMultipleOfFive(input)
+// Make a function named isMultipleOfFive(input)
 // Make a function named isThree(input)
 // Make a function named isMultipleOfThree(input)
 // Make a function named isMultipleOfThreeAndFive(input)
@@ -39,13 +42,13 @@
 // Write a function named degreesToRadians(number)
 // Write a function named radiansToDegrees(number)
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
-//     Make a function named trim(string) that removes empty spaces before and after the input.
-//     Make a function named areEqual(input1, input2) that returns if both inputs have the same value
+// Make a function named trim(string) that removes empty spaces before and after the input.
+// Make a function named areEqual(input1, input2) that returns if both inputs have the same value
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
-//     Make a function named not(input) returns the input with a flipped boolean
+// Make a function named not(input) returns the input with a flipped boolean
 // Make a function named notNot(input) that the negation of the negation of the input.
-//     Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+// Make a function named and(predicate1, predicate2) that returns the logical operation of AND
 // Make a function named or(predicate1, predicate2) that returns the logical operation of OR
 // Write a function called reverseString(string) that reverses a string
 // Make a function named absoluteValue(number) that returns the absolute value of a number.
-//     Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
+// Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
