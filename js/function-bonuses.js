@@ -121,3 +121,9 @@ function doMath(operator, a, b) {
         return output;
 }
 console.log(doMath(add, 5, 1));
+
+// Maria's solution
+// function doMath(operator, a, b) {
+//     return operator(a, b);
+// }
+// console.log(doMath(add, 5, 1));
