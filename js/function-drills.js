@@ -35,7 +35,7 @@
 // Write a function named cube(n) that returns n * n * n
 // Write a function named squareRoot(n) that returns the square root of the input
 // Write a function named cubeRoot(n) that returns the cube root of the input
-// Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
+// Write a function named invertSign(number) that returns a negative version of a positive number, a positive version of negative, and false for all else.
 // Write a function named degreesToRadians(number)
 // Write a function named radiansToDegrees(number)
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.

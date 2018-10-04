@@ -108,19 +108,20 @@ function square(a) {
 // # Super Duper Gold-Star Bonus
 // Write a function called sumOfSquares(a, b) that uses only your add() function and your square function
 // and not + or * operators
-function sumOfSquares(a, b) {
-    var output;
-    return output;
-}
-console.log(sumOfSquares(add(10, 10)));
-console.log(sumOfSquares())
+    function sumOfSquares(a, b) {
+        var sqA = square(a);
+        var sqB = square(b);
+        return add(sqA, sqB);
+    }
+    console.log(sumOfSquares(a, b));
+
 // Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you
 // want to apply. a and b are the two numbers to run that function on.
 function doMath(operator, a, b) {
     var output = operator(a, b);
         return output;
 }
-console.log(doMath(add, 5, 1));
+console.log(doMath(subtract, 5, 1)); // Change out operator and a, b and get result
 
 // Maria's solution
 // function doMath(operator, a, b) {
