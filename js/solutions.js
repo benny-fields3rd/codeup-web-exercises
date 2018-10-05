@@ -20,7 +20,8 @@
  * and
  * concat
  */
-// Define a function named isTrue that takes in any input and returns true if the input provided is exactly equal to true in value and data type.
+// Define a function named isTrue that takes in any input and returns true if the
+// input provided is exactly equal to true in value and data type.
 //
 // isTrue(true)             // true
 // isTrue(false)            // false
@@ -32,6 +33,7 @@
 
 var input = true;
 function isTrue(input) {
+    //return === true; //shorter without all of the if/else
     if (input === true) {
         return true;
     } else {
@@ -40,7 +42,8 @@ function isTrue(input) {
 }
 isTrue(3);
 
-// Define a function named isFalse that takes in a value and returns a true if and only if the provided input is equal to false in both type and value.
+// Define a function named isFalse that takes in a value and returns a true if
+// and only if the provided input is equal to false in both type and value.
 //
 // isFalse(false)             // true
 // isFalse(true)              // false
@@ -52,6 +55,7 @@ isTrue(3);
 
 var input1 = false;
 function isFalse(input1) {
+    // return input === false;
     if (input1 === false || !true) {
         return true;
     } else {
@@ -110,6 +114,8 @@ addOne(-5);
 // isEven("banana")            // false
 
 function isEven(singleInput) {
+    //input = parseFloat(singleInput)
+    //return input % 2
     return singleInput == parseFloat(singleInput) && !(singleInput % 2);
 }
 isEven()
@@ -140,7 +146,7 @@ function isIdentical(arg1, arg2) {
 // isEqual("java", "javascript")         // false
 
 function isEqual(inputA, inputB) {
-    return inputA == inputB;
+    return inputA == inputB; //double = to compare values and not the type
 }
 
 // Define a function named or that takes in two input arguments.
@@ -184,6 +190,7 @@ function and(arg1, arg2) {
 // tests.js is the suite of automated tests that call your functions in solutions.js with different inputs.
 
 function concat(word1, word2) {
+    //return wors1.toString() + word2; //You only need one of the values to be a string.
     var result = word1.toString() + word2.toString();
     return result;
 }
@@ -221,6 +228,111 @@ concat(4, 2);
 
 // not
 //
+
+///// Ryans Solutions
+"use strict";
+
+/**
+ * Write your solutions here.
+ *
+ * **Note**: While normally it is good practice to wrap your javascript in an
+ * immediately invoked function expression (iife), you should _not_ do that
+ * here. If you do, the automated tests will not be able to see your functions.
+ * If you don't know what an iffe is, don't worry about it :)
+ *
+ * This file is for defining the following functions. See README.md for more detail.
+ * isTrue
+ * isFalse
+ * not
+ * addOne
+ * isEven
+ * isIdentical
+ * isEqual
+ * or
+ * and
+ * concat
+ */
+
+// isTrue function should take in any input and return true if that input is exactly true
+// function isTrue(input) {
+//     // return input === true;
+//     // return returns expressions
+//
+//     if(input === true) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+//
+//
+// function isFalse(input) {
+//     return input === false;
+// }//yay!
+//
+//
+// // write a not() function that takes in any input and returns its boolean opposite
+// function not(parameter) {
+//     return !parameter;
+// }
+//
+// //Define a function named addOne that takes in a single input.
+// //If the input is a number or a numeric string, return the value plus one.
+//
+// function addOne(input) {
+//     // the new value for input is parseFloat on the original value
+//     // reassignment
+//     input = parseFloat(input);
+//     return input + 1;
+//
+// }
+//
+// //Define a function named isEven that takes in a single input. If the input is an
+// // even number or a string containing an even number, return true. Any other input should return false for the output.
+// // function isEven(input){
+// //     input = parseFloat(input);
+// //     return input % 2 === 0;
+// // }
+//
+// function isEven(singleInput) {
+//     if(typeof singleInput === "boolean") {
+//         return false;
+//     }
+//     return singleInput % 2 === 0;
+// }
+//
+// //Define a function named isIdentical that takes in two input arguments. If each input is equal both in data type and in value,
+// // then return true. If the values are not the same data type or not the same value, return false.
+// function isIdentical(input1, input2){
+//     return input1 === input2;
+// }
+//
+// function isEqual(input1, input2) {
+//     return input1 == input2;
+// }
+//
+// function or(a, b) {
+//     return a || b;
+// }
+//
+// function and(a, b) {
+//     return a && b;
+// }
+//
+// function concat(a, b) {
+//     return a.toString() + b.toString();
+// }
+
+// function concat(x, y) {
+//    return "" + x + y;
+//}
+
+
+
+
+
+
+
 
 
 

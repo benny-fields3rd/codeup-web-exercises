@@ -37,7 +37,15 @@ console.log(sayHowdy());
 // ---Remember this function does not need a defined return value
 // ================ CHALLENGE FUNCTION DRILLS
 // Write a function called `identity(input)` that takes in an argument called input and returns that input.
+function identity(input) {
+    return input;
+}
+console.log("smash bros.");
 // Write a function called `getRandomNumber(min, max)` that returns a random number between min and max values sent to that function call.
+function getRandomNumber(min, max) {
+    return Math.random() * (100 -1) + 1;
+}
+console.log(getRandomNumber());
 // Write a function called `first(input)` that returns the first character in the provided string.
 // Write a function called `last(input)` that returns the last character of a string
 // Write a function called `rest(input)` that returns everything but the first character of a string.
