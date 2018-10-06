@@ -115,7 +115,7 @@ addOne(-5);
 
 function isEven(singleInput) {
     //input = parseFloat(singleInput)
-    //return input % 2
+    //return input % 2 === 0;
     return singleInput == parseFloat(singleInput) && !(singleInput % 2);
 }
 isEven()
@@ -230,7 +230,7 @@ concat(4, 2);
 //
 
 ///// Ryans Solutions
-"use strict";
+// "use strict";
 
 /**
  * Write your solutions here.

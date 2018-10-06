@@ -1,8 +1,8 @@
 // Functions using conditionals but not loops or arrays:
 //
 // Make a function named isOdd(number)
-function isOdd() {
-    
+function isOdd(oddNum) {
+    return oddNum
 }
 // Make a function named isEven(number)
 // Make a function named identity(input) that returns the input exactly as provided.
