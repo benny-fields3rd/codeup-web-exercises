@@ -141,7 +141,7 @@
     console.log("The discount is $" + newDiscount);
     return newPrice;
     }
-    console.log(applyDiscount(price, discountPercentge));
+    console.log(applyDiscount(price, discountPercentage));
 
 // justin's solution
 //     function applyDiscount(originalPrice, discountPercentage) {
