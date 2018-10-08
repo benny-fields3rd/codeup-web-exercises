@@ -103,6 +103,7 @@ function isFalse(boolean1) {
     }
 }
 console.log(isFalse(null));
+
 // Make a function named isTruthy(input), remember that values other than true will behave like true
 function isTruthy(input) {
     if (!input) {
@@ -125,15 +126,23 @@ console.log(isFalsy(Infinity));
 // Make a function named isVowel(letter)
 
 function isVowel (letter) {
-    if (letter === 'a' || 'e' || 'i' || 'o' || 'u') {
+    if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
         return letter + " is a vowel."
     } else {
         return letter + " is a not a vowel."
     }
 }
-console.log(isVowel(0));
+console.log(isVowel("f"));
 
 // Make a function named isConsonant(letter)
+function isConsonant (letter) {
+    if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+        return letter + " is not a vowel."
+    } else {
+        return letter + " is a consonant."
+    }
+}
+console.log(isConsonant("f"));
 
 // Make a function named isCapital(letter)
 function isCapital(letter) {
@@ -156,16 +165,31 @@ function isLowerCase(letter) {
 console.log(isLowerCase("o"));
 
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
-// function hasLowerCase(string) {
-//     if
-// }
+function hasLowerCase(string) {
+    if (string !== string.toUpperCase() && string === string.toLowerCase()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(hasLowerCase("this is a test"));
+
 // Make a function named isSpace(letter) that returns if a character is a space character
+function isSpace(letter) {
+    if(letter.indexOf(" ") >= 0) {
+        return "The input has a space."
+    } else {
+        return "There are no spaces in this input."
+    }
+}
+console.log(isSpace("This is a test."));
 
 // Make a function named isZero(number)
 function isZero(number) {
     return number === 0;
 }
 console.log(isZero(0));
+
 // Make a function named notZero(input) that returns true if the input is not zero
 function isNotZero(number) {
     if (number !== 0) {
@@ -211,12 +235,28 @@ function subtract(a, b) {
 console.log(subtract(15, 10));
 
 // Write a function named multiply(a, b) that returns the product of a times b
+function multiply(a, b) {
+    return parseFloat(a * b);
+}
+console.log(multiply(5, 5));
 
 // Write a function named divide(a, b) that returns a divided by b
+function divide(a, b) {
+    return parseFloat(a / b);
+}
+console.log(divide(25, 5));
 
 // Write a function named remainder(a, b) that returns the remainder after dividing a by b
+function remainder(a, b) {
+    return parseFloat(a % b);
+}
+console.log(remainder(27, 5));
 
 // Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
+function modulo(a, b) {
+    return parseFloat(a % b);
+}
+console.log(modulo(27, 5));
 
 // Write a function named cube(n) that returns n * n * n
 function cube(n) {
@@ -254,6 +294,7 @@ function degreesToRadians(number) {
     return number * Math.PI / 180;
 }
 console.log(degreesToRadians(45));
+
 // Write a function named radiansToDegrees(number)
 function radiansToDegrees(number) {
     return number * 180 / Math.PI;
@@ -263,16 +304,20 @@ console.log(radiansToDegrees(3.141592653589793));
 // Make a function named isBlank(input) that determines if a given input is
 // spaces, newline characters, or tabs.
 function isBlank(input) {
-    if(input == " " || "\n" || "\t") {
+    if(input === " " || input === "\n" || input === "\t") {
         return true;
     } else {
         return false;
     }
 }
-console.log(isBlank("sds"));
+console.log(isBlank(" "));
 
 // Make a function named trim(string) that removes empty spaces before and
 // after the input.
+function trim(string) {
+    return string.trim();
+}
+console.log(trim(" This has the white space removed. "));
 
 // Make a function named areEqual(input1, input2) that returns if both inputs have the same value
 function areEqual(input1, input2) {
@@ -286,11 +331,11 @@ console.log(areEqual(2, "n"));
 
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
 function areIdentical(input1, input2) {
-if (input1 === input2) {
-    return true;
-} else {
-    return false;
-}
+    if (input1 === input2) {
+        return true;
+    } else {
+        return false;
+    }
 }
 console.log(areIdentical(2, 2));
 
@@ -317,6 +362,7 @@ function or(predicate1, predicate2) {
     return predicate1 || predicate2;
 }
 console.log(or(7, 17));
+
 // Write a function called reverseString(string) that reverses a string
 function reverseString(string) {
     return string.split("").reverse().join("");
@@ -331,4 +377,7 @@ console.log(absoluteValue(2.50));
 
 // Make a function named rollDice(sides) that takes in an argument containing the number of sides the die
 // should have. Generate a random number between 1 up to and including the number of sides.
-
+function rollDice(sides) {
+    return Math.floor(Math.random() * sides + 1);
+}
+console.log(rollDice(6));
