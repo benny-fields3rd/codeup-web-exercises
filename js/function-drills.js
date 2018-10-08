@@ -131,32 +131,84 @@ function isVowel (letter) {
         return letter + " is a not a vowel."
     }
 }
-console.log(isVowel("t"));
+console.log(isVowel(0));
+
 // Make a function named isConsonant(letter)
 
 // Make a function named isCapital(letter)
+function isCapital(letter) {
+    if(letter === letter.toUpperCase()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isCapital("O"));
 
 // Make a function named isLowerCase(letter)
+function isLowerCase(letter) {
+    if(letter === letter.toLowerCase()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isLowerCase("o"));
 
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
-
+// function hasLowerCase(string) {
+//     if
+// }
 // Make a function named isSpace(letter) that returns if a character is a space character
 
 // Make a function named isZero(number)
-
+function isZero(number) {
+    return number === 0;
+}
+console.log(isZero(0));
 // Make a function named notZero(input) that returns true if the input is not zero
+function isNotZero(number) {
+    if (number !== 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isNotZero(7));
 
 // Write a function named lowerCase(string)
-
+function lowerCase(string) {
+    return ;
+}
 // Write a function named double(n) that returns a number times two
+function double(n) {
+    return parseFloat(n * 2);
+}
+console.log(double(10));
 
 // Write a function named triple(n) that returns a number times 3
+function triple(n) {
+    return parseFloat(n * 3);
+}
+console.log(triple(5));
 
 // Write a function named quadruple(n) that returns a number times 4
+function quadruple(n) {
+    return parseFloat(n * 4);
+}
+console.log(quadruple(5));
 
 // Write a function named half(n) that returns 1/2 of the provided input
+function half(n) {
+    return parseFloat(n / 2);
+}
+console.log(half(100));
 
 // Write a function named subtract(a, b) that returns a minus b
+function subtract(a, b) {
+    return parseFloat(a - b);
+}
+console.log(subtract(15, 10));
 
 // Write a function named multiply(a, b) that returns the product of a times b
 
@@ -167,36 +219,116 @@ console.log(isVowel("t"));
 // Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
 
 // Write a function named cube(n) that returns n * n * n
+function cube(n) {
+    return parseFloat(n * n * n);
+}
+console.log(cube(10));
 
 // Write a function named squareRoot(n) that returns the square root of the input
+function squareRoot(n) {
+    return Math.sqrt(n);
+}
+console.log(squareRoot(9));
 
 // Write a function named cubeRoot(n) that returns the cube root of the input
+function cubeRoot(n) {
+    return Math.cbrt(n);
+}
+console.log(cubeRoot(9));
 
-// Write a function named invertSign(number) that returns a negative version of a positive number, a positive version of negative, and false for all else.
+// Write a function named invertSign(number) that returns a negative version of a positive number,
+// a positive version of negative, and false for all else.
+function invertSign(number) {
+    if(number = number * -1) {
+        return number;
+    } else if(number = number * 1) {
+        return number;
+    } else {
+        return false;
+    }
+}
+console.log(invertSign("a"));
 
 // Write a function named degreesToRadians(number)
-
+function degreesToRadians(number) {
+    return number * Math.PI / 180;
+}
+console.log(degreesToRadians(45));
 // Write a function named radiansToDegrees(number)
+function radiansToDegrees(number) {
+    return number * 180 / Math.PI;
+}
+console.log(radiansToDegrees(3.141592653589793));
 
-// Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
+// Make a function named isBlank(input) that determines if a given input is
+// spaces, newline characters, or tabs.
+function isBlank(input) {
+    if(input == " " || "\n" || "\t") {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isBlank("sds"));
 
-// Make a function named trim(string) that removes empty spaces before and after the input.
+// Make a function named trim(string) that removes empty spaces before and
+// after the input.
 
 // Make a function named areEqual(input1, input2) that returns if both inputs have the same value
+function areEqual(input1, input2) {
+    if (input1 == input2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(areEqual(2, "n"));
 
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
+function areIdentical(input1, input2) {
+if (input1 === input2) {
+    return true;
+} else {
+    return false;
+}
+}
+console.log(areIdentical(2, 2));
 
 // Make a function named not(input) returns the input with a flipped boolean
+function not(input) {
+    return !input;
+}
+console.log(not("9"));
 
 // Make a function named notNot(input) that the negation of the negation of the input.
+function notNot(input) {
+    return !!input;
+}
+console.log(notNot("9"));
 
 // Make a function named and(predicate1, predicate2) that returns the logical operation of AND
+function and(predicate1, predicate2) {
+    return predicate1 && predicate2;
+}
+console.log(and(7, 7));
 
 // Make a function named or(predicate1, predicate2) that returns the logical operation of OR
-
+function or(predicate1, predicate2) {
+    return predicate1 || predicate2;
+}
+console.log(or(7, 17));
 // Write a function called reverseString(string) that reverses a string
+function reverseString(string) {
+    return string.split("").reverse().join("");
+}
+console.log(reverseString("Oprah"));
 
 // Make a function named absoluteValue(number) that returns the absolute value of a number.
+function absoluteValue(number) {
+    return Math.abs(number);
+}
+console.log(absoluteValue(2.50));
 
-// Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
+// Make a function named rollDice(sides) that takes in an argument containing the number of sides the die
+// should have. Generate a random number between 1 up to and including the number of sides.
 
