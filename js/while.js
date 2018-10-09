@@ -34,8 +34,9 @@ do {
     if (conesSold <= allCones) {
         allCones = allCones - conesSold;
         console.log("I sold " + conesSold);
-    } else if (allCones === 0) {
-        console.log("Whoohoo! I sold all my cones!");
+        if (allCones === 0) {
+            console.log("Whoohoo! I sold all my cones!");
+        }
     } else {
         console.log("I can't sell you " + conesSold + " because I only have " + allCones + ".");
     }
