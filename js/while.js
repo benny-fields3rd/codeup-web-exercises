@@ -25,7 +25,6 @@ var allCones = Math.floor(Math.random() * 50) + 50;
 
 // This expression will generate a random number between 1 and 5
 // Math.floor(Math.random() * 5) + 1;
-
 do {
     // State how many cones I have to sell
     console.log("I have " + allCones + " cone(s) to sell.");
@@ -33,12 +32,12 @@ do {
     var conesSold = Math.floor(Math.random() * 5) + 1;
     if (conesSold <= allCones) {
         allCones = allCones - conesSold;
-        console.log("I sold " + conesSold);
+        console.log("Yes! I just sold " + conesSold + ".");
         if (allCones === 0) {
-            console.log("Whoohoo! I sold all my cones!");
+            console.log("Whoohoo! I sold all of my cones!");
         }
     } else {
-        console.log("I can't sell you " + conesSold + " because I only have " + allCones + ".");
+        console.log("Sorry, I can't sell you " + conesSold + " because I only have " + allCones + ".");
     }
 } while(allCones !== 0);
 

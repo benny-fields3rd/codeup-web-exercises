@@ -42,3 +42,62 @@ function randomNum() {
     return i;
 }
 console.log(i);
+
+// Refactored question #2 (while loop) as a for loop
+for (var i = 2; i <= 65536; i *= 2) {
+    console.log(i);
+}
+
+/* #4
+Create a for loop that uses console.log to create the output shown below.
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999
+*/
+// my version
+for (var k = 1; k < 10; k++) {
+    var text = "";
+    for (var j = 1; j <= k; j++) {
+        text += k;
+    } console.log(text);
+}
+
+// Another way to do it provided by Matthew B.
+for (var x = 1; x <= 9; x += 1){
+    console.log(x.toString().repeat(x));
+}
+
+/* #5.
+Create a for loop that uses console.log to create the output shown below.
+100
+95
+90
+85
+80
+75
+70
+65
+60
+55
+50
+45
+40
+35
+30
+25
+20
+15
+10
+5
+ */
+for (var o = 100; o > 0; o -= 5) {
+    console.log(o);
+}
+
+
