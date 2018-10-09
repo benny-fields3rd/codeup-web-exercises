@@ -17,12 +17,17 @@ For example, showMultiplicationTable(7) should output
 7 x 10 = 70
  */
 function showMultiplicationTable(input) {
-    for (var number = 1 ; number < 11 ; number++) {
+    for (var number = 1 ; number <= 10 ; number++) {
         var number2 = number * parseFloat(input);
-        console.log(input + " X " + number +" = " + number2);
+        console.log(input + " X " + number + " = " + number2);
     }
 }
 showMultiplicationTable(10);
+
+// Refactored question #2 (while loop) as a for loop
+for (var i = 2; i <= 65536; i *= 2) {
+    console.log(i);
+}
 
 /* 3.
 Use a for loop and the code from the previous lessons to generate 10 random numbers between
@@ -34,19 +39,23 @@ Use a for loop and the code from the previous lessons to generate 10 random numb
 199 is odd
 ...
  */
+// Instructor Ryan's solution
+function isEven(num) {
+    return num % 2 === 0;
+}
 
-function randomNum() {
-    for(var i = 0; i < 10; i++){
-        n.push(Math.floor(Math.random() * 200) + 20);
+var randomNumber;
+for (var i = 0; i < 10; i++) {
+    randomNumber = Math.floor(Math.random() * 180) + 20;
+
+    if (isEven(randomNumber)) {
+        console.log(randomNumber + " is even!");
+    } else {
+        console.log(randomNumber + " is odd!");
     }
-    return i;
 }
-console.log(i);
 
-// Refactored question #2 (while loop) as a for loop
-for (var i = 2; i <= 65536; i *= 2) {
-    console.log(i);
-}
+
 
 /* #4
 Create a for loop that uses console.log to create the output shown below.
@@ -61,16 +70,21 @@ Create a for loop that uses console.log to create the output shown below.
 999999999
 */
 // my version
-for (var k = 1; k < 10; k++) {
-    var text = "";
-    for (var j = 1; j <= k; j++) {
-        text += k;
-    } console.log(text);
-}
+// for (var k = 1; k < 10; k++) {
+//     var text = "";
+//     for (var j = 1; j <= k; j++) {
+//         text += k;
+//     } console.log(text);
+// }
 
 // Another way to do it provided by Matthew B.
-for (var x = 1; x <= 9; x += 1){
-    console.log(x.toString().repeat(x));
+// for (var x = 1; x <= 9; x += 1){
+//     console.log(x.toString().repeat(x));
+// }
+// Instructor Ryan's version----same as Matthews, but modified slightly
+for(var i = 1; i <= 9; i++) {
+    i = i.toString();
+    console.log(i.repeat(i));
 }
 
 /* #5.
@@ -96,7 +110,7 @@ Create a for loop that uses console.log to create the output shown below.
 10
 5
  */
-for (var o = 100; o > 0; o -= 5) {
+for (var o = 100; o > 0; o -= 5) { // you can also use o >= 5 and get the same result because decrement is by 5
     console.log(o);
 }
 

@@ -47,7 +47,7 @@ a break statement to continue prompting the user if they enter invalid input. */
 
 // Prompt using a do while loop:
 // var correct = false;
-
+//
 // do {
 //     var skipNum = parseFloat(prompt("Enter an odd number between 1 - 50: "));
 //     if (!isNaN(skipNum) && skipNum % 2 !==0) {
