@@ -5,7 +5,12 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    var names = ["Mary", "Joe", "Robert", "Larry"];
+    var names = [
+        "Mary",
+        "Joe",
+        "Robert",
+        "Larry"
+    ];
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
@@ -56,25 +61,25 @@
      */
     //created function to call first element of array
     console.log("Function to call first element of array:");
-    function first() {
-        console.log(names[0]);
+    function first(name) {
+       return names[0];
     }
     // calling above function
-    first();
+    console.log(first());
 
     //created function to call first element of array
     console.log("Function to call second element of array:");
-    function second() {
-        console.log(names[1]);
+    function second(name) {
+        return names[1];
     }
     // calling above function
-    second();
+    console.log(second());
 
     //created function to call first element of array
     console.log("Function to call last element of array:");
-    function last() {
-        console.log(names[3]);
+    function last(name) {
+        return names[names.length - 1];
     }
     // calling above function
-    last();
+    console.log(last());
 })();
