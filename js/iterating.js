@@ -1,6 +1,5 @@
 (function(){
     "use strict";
-
     /**
      * TODO:
      * Create an array of 4 people's names and store it in a variable called
