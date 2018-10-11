@@ -11,6 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+    var person = {
+        firstName: "Elon",
+        lastName: "Musk"
+    };
+    console.log(person.firstName);
+    console.log(person.lastName);
 
     /**
      * TODO:
@@ -21,6 +27,10 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHello = function () {
+        console.log("Hello from " + person.firstName + " " + person.lastName + "!");
+    };
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +46,26 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+// amount before discount
+// amount after discount if any
+    shoppers.forEach(function(shopper){
+        if (shopper.amount >= 200) {
+            var twelve = shopper.amount * .12;
+            var discount = shopper.amount - twelve;
+            console.log("Congratulations " + shopper.name + "! " +
+                        "Your price before discount was $"+ shopper.amount.toFixed(2) +
+                        ". " + "Your discount is $" +
+                        twelve.toFixed(2) + "." + " Your price after discount is $" + discount.toFixed(2) + ".");
+        } else {
+            console.log("Too bad " + shopper.name + "!" + " " + "No discount for you! " +
+                        "You have to pay: $" + shopper.amount.toFixed(2));
+        }
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -54,6 +79,47 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    var books = [
+        {
+            title: "The Sins of Tacos",
+            author: {
+                firstName: "Taco",
+                lastName: "Cabana"
+            }
+        },
+        {
+            title: "Father would Roll Over in His Grave",
+            author: {
+                firstName: "Wal",
+                lastName: "Mart"
+            }
+        },
+        {
+            title: "The 120 Hour Workweek",
+            author: {
+                firstName: "Elon",
+                lastName: "Musk"
+            }
+        },
+        {
+            title: "HEB, The Start",
+            author: {
+                firstName: "Howard-E",
+                lastName: "Butt"
+            }
+        },
+        {
+            title: "Sleep Programming!",
+            author: {
+                firstName: "Coding",
+                lastName: "Up"
+            }
+        }
+    ];
+    console.log(books);
+    console.log(books[2].title) // "The Salmon of Doubt"
+    console.log(books[2].author.firstName) // "Douglas"
+    console.log(books[2].author.lastName) // "Adams"
 
     /**
      * TODO:
@@ -80,6 +146,18 @@
      *      ...
      */
 
+    function listBooks() {
+        var bookNumber = 1;
+        for (var b = 0; b < books.length; b++) {
+            console.log("Book # " + bookNumber + "\n" +
+                        "Title: " + books[b].title + "\n" +
+                        "Author: " + books[b].author.firstName +
+                         " " + books[b].author.lastName + "\n" + "---");
+            bookNumber++;
+        }
+        return books.length;
+    }
+    listBooks();
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author

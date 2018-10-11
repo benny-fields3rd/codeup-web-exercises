@@ -31,17 +31,11 @@ function rest() {
 console.log(rest());
 // Exercise 3. Write a function named getLongestString that takes in an array of
 // strings and returns the longest string of that array
-function getLongestString(array) {
-    var lgth = 0;
-    var longest;
-
-    for(var i=0; i < array.length; i++){
-        if(array[i].length > lgth){
-            lgth = array[i].length;
-            longest = array[i];
-        }
+function getLongestString(str) {
+    var longestWord = 0;
+    for (i = 0; i < str.lenght) {
+        ß
     }
-    return longest;
 }
 console.log(getLongestString());
 // Exercise 3.1 Write a function named getShortestString that takes in an array of
