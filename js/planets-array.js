@@ -12,6 +12,11 @@
         'Neptune'
     ];
 
+    function rest() {
+        planets.slice(1);
+        return planets;
+    }
+    console.log(rest());
     /**
      * TODO:
      * Read each console log below, and write some javascript code to perform
@@ -27,11 +32,11 @@
     console.log(planets);
 
     console.log('Removing "The Sun" from the beginning of the planets array.');
-    planets.shift("The Sun");
+    planets.shift(); // no need for argument
     console.log(planets);
 
     console.log('Removing "Pluto" from the end of the planets array.');
-    planets.pop("Pluto");
+    planets.pop(); // no need for argument
     console.log(planets);
 
     console.log('Finding and logging the index of "Earth" in the planets array.');
