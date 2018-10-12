@@ -11,7 +11,7 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    var person = {
+    var person = { // NOTE: object literal notation is ideal if you know the information/data as shown below.
         firstName: "Elon",
         lastName: "Musk"
     };
@@ -27,8 +27,13 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    // person.sayHello = function () {
+    //     console.log("Hello from " + person.firstName + " " + person.lastName + "!");
+    // };
+
+    // using "this' instead...
     person.sayHello = function () {
-        console.log("Hello from " + person.firstName + " " + person.lastName + "!");
+        console.log("Hello from " + this.firstName + " " + this.lastName + "!");
     };
     console.log(person.sayHello());
 
@@ -51,12 +56,12 @@
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
-// amount before discount
-// amount after discount if any
+
+    // using a forEach loop with if/else conditional
     shoppers.forEach(function(shopper){
-        if (shopper.amount >= 200) {
-            var twelve = shopper.amount * .12;
-            var discount = shopper.amount - twelve;
+        if (shopper.amount > 200) { // don't use equal because the problem says "more" than 200.
+            var twelve = shopper.amount * .12; // calculation to determine how much the discount is
+            var discount = shopper.amount - twelve; // calculation to
             console.log("Congratulations " + shopper.name + "! " +
                         "Your price before discount was $"+ shopper.amount.toFixed(2) +
                         ". " + "Your discount is $" +
@@ -66,6 +71,40 @@
                         "You have to pay: $" + shopper.amount.toFixed(2));
         }
     });
+
+    // Justin's solution
+    function calculateDiscount(amount) {
+        var finalAmount = 0;
+        var amountOff = 0;
+
+         if (amount > 200) {
+             amountOff = amount * .12;
+             finalAmount = amount - amountOff;
+         } else {
+             finalAmount = amount;
+         }
+
+         return { // returns an object of two values with two different meanings
+             finalAmount: finalAmount,
+             amountOff: amountOff
+        };
+    }
+
+    function displayShopperInfo(shoppers) {
+        shoppers.forEach(function (shopper) {
+            var amount = calculateDiscount(shopper.amount); // calling previously created function
+            var message = ""; // used to clean up code instead of typing everything into console.log.
+
+            message += shopper.name + " bought $ ";
+            message += shopper.amount.toFixed(2);
+            message += " and got $" + amount.amountOff.toFixed(2);
+            message += " off and will pay $";
+            message += amount.finalAmount.toFixed(2) + ".";
+
+            console.log(message);
+        });
+    }
+    displayShopperInfo(shoppers);
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -116,7 +155,7 @@
             }
         }
     ];
-    console.log(books);
+    console.log(books); // lists all of the books in the array
     console.log(books[2].title); // "The Salmon of Doubt"
     console.log(books[2].author.firstName); // "Douglas"
     console.log(books[2].author.lastName); // "Adams"
@@ -159,10 +198,10 @@
     }
     listBooks();
 
-    // using forEach loop!!!!
+    // using forEach loop!!!!g
    books.forEach(function (book, index) {
-        console.log("Book # " + [index += 1]);
-        console.log("Title: " + book.title);
+        console.log("Book # " + [index += 1]); // use (index + 1) instead so it should be ("Book # " + (index + 1));
+        console.log("Title: " + book.title); // also, instead of console logging everything, create messages like in the above example.
         console.log("Author: " + book.author.firstName + " " + book.author.lastName);
         console.log("---");
    });
