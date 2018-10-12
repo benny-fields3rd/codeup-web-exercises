@@ -16,7 +16,7 @@
         var detonationTimer = 5;
 
         // TODO: This function needs to be called once every second
-        var interval = setInterval(function updateTimer() {
+        function updateTimer() {
             if (detonationTimer === 0) {
                 alert('EXTERMINATE!');
                 document.body.innerHTML = '';
@@ -24,13 +24,13 @@
                 document.getElementById('timer').innerHTML = detonationTimer;
             }
             detonationTimer--;
-        }, 1000);
-
+        }
+        var intervalId = setInterval(updateTimer, 1000); // added this
         // TODO: When this function runs, it needs to
         // cancel the interval/timeout for updateTimer()
         function defuseTheBOM() {
-            clearInterval(interval);
-            alert('Great job Hero! You diffused the bomb!!');
+            clearInterval(intervalId);
+            alert('Great job Hero! You diffused the bomb!!'); // added an alert to inform the person they are a hero!
         }
 
         // Don't modify anything below this line!
