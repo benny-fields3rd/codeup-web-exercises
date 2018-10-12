@@ -15,13 +15,13 @@ function makeCar(make, model) {
     return car;
 }
 console.log(makeCar("Tesla", "Model 3"));
-// Exercise 2. Use the following data to create an object named salesReport.
+/* Exercise 2. Use the following data to create an object named salesReport.
 //     The object should have the following properties:
 //       title, date, office, and employees.
 //       the employees property should hold an array of objects.
 //       each employee should be represented by an object with the following properties:
 //         employee-number, first-name, last-name, sales-units
-//
+*/
 // Monthly Sales Report
 // Date: 03-17-2015
 // Office: Codeup
@@ -39,6 +39,79 @@ console.log(makeCar("Tesla", "Model 3"));
 // 10, Henry, Kissinger, 1
 // 11, Arthur Herbert, Fonzarelli, 23
 // 12, Betty, Boop, 67
+var salesReport = {
+    title: "Monthly Sales Report",
+    date: "03-17-2015",
+    office: "Codeup",
+    employees: [
+        {
+            employeeNumber: 1,
+            firstName: "Jane",
+            lastName: "Janeway",
+            salesUnits: 3
+        },
+        {
+            employeeNumber: 3,
+            firstName: "Tricia",
+            lastName: "Triciason",
+            salesUnits: 5
+        },
+        {
+            employeeNumber: 4,
+            firstName: "Jeannette",
+            lastName: "Jeanson",
+            salesUnits: 4
+        },
+        {
+            employeeNumber: 5,
+            firstName: "Charles Emmerson",
+            lastName: "Winchester III",
+            salesUnits: 2
+        },
+        {
+            employeeNumber: 6,
+            firstName: "Chet",
+            lastName: "Chedderson",
+            salesUnits: 8
+        },
+        {
+            employeeNumber: 7,
+            firstName: "Chaiam",
+            lastName: "Chaiamson",
+            salesUnits: 12
+        }, {
+            employeeNumber: 8,
+            firstName: "Dale",
+            lastName: "Dalesinger",
+            salesUnits: 1
+        },
+        {
+            employeeNumber: 9,
+            firstName: "Zig",
+            lastName: "Ziglar",
+            salesUnits: 50
+        },
+        {
+            employeeNumber: 10,
+            firstName: "Henry",
+            lastName: "Kissinger",
+            salesUnits: 1
+        },
+        {
+            employeeNumber: 11,
+            firstName: "Arthur Herbert",
+            lastName: "Fonzarelli",
+            salesUnits: 23
+        },
+        {
+            employeeNumber: 12,
+            firstName: "Betty",
+            lastName: "Boop",
+            salesUnits: 67
+        }
+    ]
+};
+console.log(salesReport);
 
 // Exercise 3. On the salesReport object you made, add the following methods.
 // getEmployeeCount() should return the total number of employees
