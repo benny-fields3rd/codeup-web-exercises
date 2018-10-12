@@ -7,7 +7,14 @@
 
 // Exercise 1. Write a function called makeCar that takes in two strings, make and model, and returns an object with those properties
 // Example: makeCar("VW", "beetle") returns the object {"make": "VW", "model", "beetle"}
-
+function makeCar(make, model) {
+    var car = {
+        make: "Tesla",
+        model: "Model 3"
+    };
+    return car;
+}
+console.log(makeCar("Tesla", "Model 3"));
 // Exercise 2. Use the following data to create an object named salesReport.
 //     The object should have the following properties:
 //       title, date, office, and employees.

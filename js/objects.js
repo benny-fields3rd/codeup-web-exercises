@@ -111,15 +111,15 @@
         {
             title: "Sleep Programming!",
             author: {
-                firstName: "Coding",
+                firstName: "Code",
                 lastName: "Up"
             }
         }
     ];
     console.log(books);
-    console.log(books[2].title) // "The Salmon of Doubt"
-    console.log(books[2].author.firstName) // "Douglas"
-    console.log(books[2].author.lastName) // "Adams"
+    console.log(books[2].title); // "The Salmon of Doubt"
+    console.log(books[2].author.firstName); // "Douglas"
+    console.log(books[2].author.lastName); // "Adams"
 
     /**
      * TODO:
@@ -145,7 +145,7 @@
      *      ---
      *      ...
      */
-
+    // using for loop!!
     function listBooks() {
         var bookNumber = 1;
         for (var b = 0; b < books.length; b++) {
@@ -158,6 +158,15 @@
         return books.length;
     }
     listBooks();
+
+    // using forEach loop!!!!
+   books.forEach(function (book, index) {
+        console.log("Book # " + [index += 1]);
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+        console.log("---");
+   });
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -168,5 +177,6 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
 
 })();
