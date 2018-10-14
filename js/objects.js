@@ -198,13 +198,23 @@
     }
     listBooks();
 
-    // using forEach loop!!!!g
-   books.forEach(function (book, index) {
-        console.log("Book # " + [index += 1]); // use (index + 1) instead so it should be ("Book # " + (index + 1));
-        console.log("Title: " + book.title); // also, instead of console logging everything, create messages like in the above example.
-        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
-        console.log("---");
-   });
+    // using forEach loop!!!!
+   // books.forEach(function (book, index) {
+   //      console.log("Book # " + [index += 1]); // use (index + 1) instead so it should be ("Book # " + (index + 1));
+   //      console.log("Title: " + book.title); // also, instead of console logging everything, create messages like in the above example.
+   //      console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+   //      console.log("---");
+   // });
+
+    // using forEach loop with refactored message variable instead of console logging!!!!
+    books.forEach(function (book, index) {
+        var message = "";
+        message += ("Book # " + (index + 1) + "\n"); // use (index + 1) instead so it should be ("Book # " + (index + 1));
+        message += ("Title: " + book.title + "\n"); // also, instead of console logging everything, create messages like in the above example.
+        message += ("Author: " + book.author.firstName + " " + book.author.lastName + "\n");
+        message += ("---");
+        console.log(message);
+    });
 
     /**
      * Bonus:

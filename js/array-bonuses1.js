@@ -25,8 +25,14 @@ randomDay();
 //   someFunction("a") // returns 1
 //   someFunction("z") // returns 26
 //
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o,', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+function locateLetterNumber() {
 
-
+    for (var i = 1; 1 <=26; i++) {
+        return alphabet[i];
+    } console.log(i);
+}
+locateLetterNumber();
 // 3. Create a function that returns the longest string in a given array of string elements
 
 
