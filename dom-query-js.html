@@ -5,10 +5,16 @@
         <title>DOM: Query and Modify</title>
     </head>
     <body>
-        <button id="changeMainHeader">Button 1</button>
-        <button id="changeSubHeader">Button 2</button>
-        <button id="changeListItems">Button 3</button>
-        <button id="changeSubParagraph">Button 4</button>
+        <!--
+        Add 4 buttons to the page. Attach click event listeners to each of the buttons
+        and have the handlers perform the modifications that were automatically taking place.
+        For example, the first button should set inner html of mainHeader to "JavaScript is Cool".
+        -->
+        <button id="changeMainHeader">Change Main Header</button> <!-- changes main header -->
+        <button id="changeSubHeader">Change Sub Header</button> <!-- changes sub header -->
+        <button id="changeListItems">Change List Items</button> <!-- changes li -->
+        <button id="changeSubParagraph">Change Sub Paragraph</button> <!-- changes sub paragraph -->
+
     <h1 id="main-header">Hello World!</h1>
     <ul>
         <li data-dbid="1">Item 1</li>
@@ -29,13 +35,15 @@
     </p>
 
     <script>
+        "use strict";
+        // create variables for each button and target the created buttons by id
         var btn1 = document.getElementById("changeMainHeader");
         var btn2 = document.getElementById("changeSubHeader");
         var btn3 = document.getElementById("changeListItems");
         var btn4 = document.getElementById("changeSubParagraph");
 
         (function() {
-            "use strict";
+
             // TODO: Uncomment next line and get the main header element by id
             var mainHeader = document.getElementById("main-header");
             console.log(mainHeader);
@@ -44,8 +52,6 @@
             function mainHeaderChange() {
                 mainHeader.innerHTML = "JavaScript is Cool";
             }
-            // added event listener that once clicked, wil perform function mainHeaderChange()
-            btn1.addEventListener("click", mainHeaderChange);
 
             // TODO: Uncomment the next line and get the sub header element by id
             var subHeader = document.getElementById("sub-header");
@@ -58,8 +64,6 @@
             function subHeaderBlue() {
                 subHeader.style.color = "blue";
             }
-            // added event listener that once clicked, wil perform function subHeaderBlue()
-            btn2.addEventListener("click", subHeaderBlue);
 
             // TODO: Uncomment the next line and get all list items
             var listItems = document.getElementsByTagName('li');
@@ -78,8 +82,6 @@
                     }
                 }
             }
-            // added event listener that once clicked, wil perform function listItemColors()
-            btn3.addEventListener("click", listItemColors);
 
             // TODO: Uncomment the next line and get all elements with class name sub-paragraph
             var subParagraphs = document.getElementsByClassName("sub-paragraph");
@@ -90,8 +92,16 @@
             function subParagraphChange() {
                 subParagraphs[0].innerHTML = "Mission Accomplished!";
             }
-            // added event listener that once clicked, wil perform function subParagraphChange()
+
+            // added event listener that once clicked, will perform function mainHeaderChange()
+            btn1.addEventListener("click", mainHeaderChange);
+            // added event listener that once clicked, will perform function subHeaderBlue()
+            btn2.addEventListener("click", subHeaderBlue);
+            // added event listener that once clicked, will perform function listItemColors()
+            btn3.addEventListener("click", listItemColors);
+            // added event listener that once clicked, will perform function subParagraphChange()
             btn4.addEventListener("click", subParagraphChange);
+
         })();
     </script>
     </body>
