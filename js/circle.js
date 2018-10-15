@@ -15,7 +15,7 @@
 
         logInfo: function (doRounding) {
             // TODO: complete this method.
-            var area = circle.getArea(); // can use this as well instead of circle.
+            var area = circle.getArea(); // can use "this" as well instead of circle.
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
             if (doRounding) { // already implied true but could do doRounding == true

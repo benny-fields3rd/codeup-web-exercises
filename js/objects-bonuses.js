@@ -996,6 +996,10 @@ var profiles =[
 ];
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 //  getProfileCount() should return the total number of profiles
+function getProfileCount() {
+    return profiles.length;
+}
+getProfileCount();
 //  getActiveCount() should return the number of active profiles
 //  getInactiveCount() should return the number of inactive profiles
 //  sumOfAllBalances() should return sum of the balance of all profiles
