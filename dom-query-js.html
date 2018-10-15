@@ -5,7 +5,10 @@
         <title>DOM: Query and Modify</title>
     </head>
     <body>
-
+        <button id="changeMainHeader">Button 1</button>
+        <button id="changeSubHeader">Button 2</button>
+        <button id="changeListItems">Button 3</button>
+        <button id="changeSubParagraph">Button 4</button>
     <h1 id="main-header">Hello World!</h1>
     <ul>
         <li data-dbid="1">Item 1</li>
@@ -26,44 +29,69 @@
     </p>
 
     <script>
+        var btn1 = document.getElementById("changeMainHeader");
+        var btn2 = document.getElementById("changeSubHeader");
+        var btn3 = document.getElementById("changeListItems");
+        var btn4 = document.getElementById("changeSubParagraph");
+
         (function() {
             "use strict";
             // TODO: Uncomment next line and get the main header element by id
             var mainHeader = document.getElementById("main-header");
-                console.log(mainHeader);
+            console.log(mainHeader);
 
             // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-            mainHeader.innerHTML = "JavaScript is Cool";
+            function mainHeaderChange() {
+                mainHeader.innerHTML = "JavaScript is Cool";
+            }
+            // added event listener that once clicked, wil perform function mainHeaderChange()
+            btn1.addEventListener("click", mainHeaderChange);
 
             // TODO: Uncomment the next line and get the sub header element by id
             var subHeader = document.getElementById("sub-header");
-                console.log(subHeader);
+            // can also use querySelector:
+            // document.querySelector("#sub-header");
+            console.log(subHeader);
 
             // TODO: Set the text color of subHeader to blue
-            subHeader.style.color = "blue";
+            // created function to change text color to blue
+            function subHeaderBlue() {
+                subHeader.style.color = "blue";
+            }
+            // added event listener that once clicked, wil perform function subHeaderBlue()
+            btn2.addEventListener("click", subHeaderBlue);
 
             // TODO: Uncomment the next line and get all list items
             var listItems = document.getElementsByTagName('li');
-                console.log(listItems);
+            console.log(listItems); // returns HTMLCollection which looks like an array
+                                    // remember, HTMLCollection is a type of node list!
 
             // TODO: Set text color on every other list item to grey
-            for (var i = 0; i < listItems.length; i += 2) {
-                listItems[i].style.color = "grey";
-            }
-
             // TODO: Set text color of li with dbid = 1 to blue
-            for (var b = 0; b < listItems.length; b += 2) {
-                if (listItems[b].getAttribute("data-dbid") === "1") {
-                    listItems[b].style.color = "blue";
+            // created function to change certain text to blue and grey
+            function listItemColors() {
+                for (var i = 0; i < listItems.length; i += 1) {
+                    if (i % 2 === 1) {
+                        listItems[i].style.color = "grey";
+                    } else if (listItems[i].getAttribute("data-dbid") === "1") {
+                        listItems[i].style.color = "blue";
+                    }
                 }
             }
+            // added event listener that once clicked, wil perform function listItemColors()
+            btn3.addEventListener("click", listItemColors);
 
             // TODO: Uncomment the next line and get all elements with class name sub-paragraph
             var subParagraphs = document.getElementsByClassName("sub-paragraph");
-                console.log(subParagraphs);
+            console.log(subParagraphs);
 
             // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-            subParagraphs[0].innerHTML = "Mission Accomplished!";
+            // created function to change paragraph text
+            function subParagraphChange() {
+                subParagraphs[0].innerHTML = "Mission Accomplished!";
+            }
+            // added event listener that once clicked, wil perform function subParagraphChange()
+            btn4.addEventListener("click", subParagraphChange);
         })();
     </script>
     </body>
