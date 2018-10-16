@@ -14,30 +14,73 @@
     <!-- div to hold map -->
     <div id="map-canvas"></div>
 
-    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_GOES_HERE"></script>
+        <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+                                                            <!-- HIDE KEY BEFORE PUSHING TO GIT!!!!! -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=[Your_API_key_goes_here!]"></script>
+                                                            <!--[Your_API_key_goes_here!]-->
+        <!-- Script to show address on map -->
+        <script type="text/javascript">
+            (function () {
+                "use strict";
 
-    <!-- Script to show address on map -->
-    <script type="text/javascript">
-        (function() {
-            "use strict";
+                // Set our map options
+                var mapOptions = {
+                    // Set the zoom level
+                    zoom: 18,
 
-            // Set our map options
-            var mapOptions = {
-                // Set the zoom level
-                zoom: 19,
+                    // This sets the center of the map at our location 29.5186519!4d-98.508089
+                    center: {
+                        lat:  29.5186519,
+                        lng: -98.508089
+                    },
+                    // Show this map in satellite view 29.5185682,-98.5080466,49
+                    mapTypeId: google.maps.MapTypeId.SATELLITE,
+                };
+                // variable for infowindow content
+                var contentString = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h1 id="firstHeading" class="firstHeading">Ilsong Garden</h1>'+
+                    '<div id="bodyContent">'+
+                    '<p><strong>Ilsong Garden</strong>, also referred to as <strong>Ilsong</strong>, is a small ' +
+                    'korean restaurant that not only serves korean food, but japanese and chinese '+
+                    'cuisine as well. I enjoy this place because of the following dishes: '+
+                    '<ul>' +
+                        '<li>ChajangMyun - black bean sauced noodles</li>' +
+                        '<li>Kalbi - korean style BBQ beef ribs</li>' +
+                        '<li>Kimchi - assorted spicy, pickled vegetables</li>' +
+                    '</ul>' +
+                    '</p>' +
+                    '<p>Website: Ilsong Garden, <a href="http://www.ilsonggarden.com/menu.html">'+
+                    'http://www.ilsonggarden.com/menu.html</a> '+
+                    '</div>'+
+                    '</div>';
 
-                // This sets the center of the map at our location 29.5186519,-98.5102777,17
-                center: {
-                    lat:  29.5186519,
-                    lng: -98.5102777
-                },
-                mapTypeId: google.maps.MapTypeId.SATTELLITE
-            };
+                // Render the map
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-            // Render the map
-            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-        })();
-    </script>
+                // Create a new infoWindow object with content
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                // Create lat and long for our marker position
+                var ilSong = { lat: 29.5186519, lng: -98.508089 };
+
+                // Add the marker to our existing map
+                var foodIcon = "https://cdn3.iconfinder.com/data/icons/meanicons-4/512/meanicons_41-512.png";
+                var marker = new google.maps.Marker({
+                    position: ilSong,
+                    map: map,
+                    animation: google.maps.Animation.DROP
+                });
+
+                // Open the window using our map and marker
+                // infowindow.open(map, marker);
+                marker.addListener("click", function() {
+                    infowindow.open(map, marker);
+                });
+            })();
+        </script>
     </body>
 </html>

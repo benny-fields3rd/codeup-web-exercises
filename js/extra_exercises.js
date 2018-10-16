@@ -11,13 +11,14 @@
 // What is the input string? Homer
 // Homer has 5 characters.
 // define variables for user string and string amount //
-// var userString = prompt("What is the input string?");
-//
-// while (userString === isNaN ) {
-//     userString = prompt("What is the input string?");
-// }
-// var stringAmount = userString.length;
-//     alert(userString + " " + "has" + " " + stringAmount + " " + "characters.");
+alert("Let's count the number of characters in a string.\n");
+var userString = prompt("What is the input string?");
+
+while (userString === isNaN ) {
+    userString = prompt("What is the input string?");
+}
+var stringAmount = userString.length;
+    alert(userString + " " + "has" + " " + stringAmount + " " + "characters.");
 
 // 2. Mad Lib
 //
@@ -33,13 +34,13 @@
 // • Use a single output statement for this program.
 // • Ifyourlanguagesupportsstringinterpolationorstring
 // substitution, use it to build up the output.
+alert("Let's play a madlib game. Please follow the instructions.");
+var noun = prompt("Enter a noun: ");
+var verb = prompt("Enter a verb: ");
+var adjective = prompt("Enter a adjective: ");
+var adverb = prompt("Enter a adverb: ");
 
-// var noun = prompt("Enter a noun: ");
-// var verb = prompt("Enter a verb: ");
-// var adjective = prompt("Enter a adjective: ");
-// var adverb = prompt("Enter a adverb: ");
-//
-// alert("I saw you" + " " + verb + " " + "your" + " " + adjective + " "+ noun + " " + adverb + ".");
+alert("I saw you" + " " + verb + " " + "your" + " " + adjective + " "+ noun + " " + adverb + ".");
 
 // 3. Simple math
 // Example Output
@@ -53,18 +54,19 @@
 //   • Values coming from users will be strings. Ensure that you convert these values to numbers before doing the math.
 //   • Keep the inputs and outputs separate from the numerical conversions and other processing.
 //   • Generate a single output statement with line breaks in the appropriate spots.
-// var firstNumber = Number(prompt("What is the first number?"));
-// var secondNumber = Number(prompt("What is the second number?"));
-//
-// var add = firstNumber + secondNumber;
-// var subtract = firstNumber - secondNumber;
-// var multiply = firstNumber * secondNumber;
-// var divide = firstNumber / secondNumber;
-//
-// alert(firstNumber + " + " + secondNumber + " = " + add + "\n" +
-// firstNumber + " - " + secondNumber + " = " + subtract + "\n" +
-// firstNumber + " * " + secondNumber + " = " + multiply + "\n" +
-// firstNumber + " / " + secondNumber + " = " + divide + "\n");
+alert("Want to do some simple math? Let'play!");
+var firstNumber = Number(prompt("What is the first number?"));
+var secondNumber = Number(prompt("What is the second number?"));
+
+var add = firstNumber + secondNumber;
+var subtract = firstNumber - secondNumber;
+var multiply = firstNumber * secondNumber;
+var divide = (firstNumber / secondNumber).toFixed(4);
+
+alert(firstNumber + " + " + secondNumber + " = " + add + "\n" +
+firstNumber + " - " + secondNumber + " = " + subtract + "\n" +
+firstNumber + " * " + secondNumber + " = " + multiply + "\n" +
+firstNumber + " / " + secondNumber + " = " + divide + "\n");
 
 // 4. Area of a rectangular room
 // When working in a global environment, you’ll have to present information in both metric and Imperial units.
@@ -84,15 +86,16 @@
 // Constraints
 // • Keep the calculations separate from the output. • Use a constant to hold the conversion factor.
 //
-// var lengthOfRoomFeet = Number(prompt("What is the length of the room in feet?"));
-// var widthOfRoomFeet = Number(prompt("What is the width of the room in feet?"));
-// var squareFeet = lengthOfRoomFeet * widthOfRoomFeet;
-// const formula = 0.09290304;
-// var metersConverted = squareFeet * formula;
+alert("Let's calculate the area of a rectangular room!");
+var lengthOfRoomFeet = Number(prompt("What is the length of the room in feet?"));
+var widthOfRoomFeet = Number(prompt("What is the width of the room in feet?"));
+var squareFeet = lengthOfRoomFeet * widthOfRoomFeet;
+const formula = 0.09290304;
+var metersConverted = squareFeet * formula;
 //
 // // output //
-// var dimension = alert(lengthOfRoomFeet + " " + "feet by" + " " + widthOfRoomFeet + " " + "feet.\n" +
-// "The area is\n" + squareFeet + " " + "feet\n" + metersConverted.toFixed(3) + " " + "square meters.");
+var dimension = alert(lengthOfRoomFeet + " " + "feet by" + " " + widthOfRoomFeet + " " + "feet.\n" +
+"The area is\n" + squareFeet + " " + "feet\n" + metersConverted.toFixed(3) + " " + "square meters.");
 
 //* 5. Pizza Party
 //*
@@ -108,6 +111,7 @@
 //*     Each person gets 2 pieces of pizza.
 //*     There are 0 leftover pieces.
 
+alert("Hungry? Let's calculate how many slices each person gets at a pizza party!");
 var numberOfPeople = Number(prompt("How many people?"));
 var numberOfPizzas = Number(prompt("How many pizzas do you have?"));
 var slicesAmount = Number(prompt("How many slices per pizza?"));
@@ -117,7 +121,7 @@ var slicesPerPerson = parseInt(totalSlices / numberOfPeople);
 var leftOverSlices = totalSlices % slicesPerPerson;
 
 alert("There are" + " " + numberOfPeople + " " + "people" + " " + "with" + " " + numberOfPizzas + " " + "pizzas.\n" +
-     "Each person gets" + " " + slicesPerPerson + " " + "pieces of pizza.\n" +
+     "Each person gets" + " " + slicesPerPerson + " " + "piece(s) of pizza.\n" +
      "There are" + " " + leftOverSlices + " " + "leftover slice(s).");
 
 // 6. Paint Calculator
@@ -135,10 +139,10 @@ alert("There are" + " " + numberOfPeople + " " + "people" + " " + "with" + " " +
 // • Use a constant to hold the conversion rate.
 // • Ensure that you round up to the next whole number.
 //     var lengthOfRoom = Number(prompt("What is the length of the room in feet?"));
-// //     var widthOfRoom = Number(prompt("What is the width of the room in feet?"));
-// //     const oneGallonCoversSqFeet = 350;
-// //     var totalSqFeet = lengthOfRoom * widthOfRoom;
-// //     var paintGallonsNeeded = totalSqFeet / 2;
+//     var widthOfRoom = Number(prompt("What is the width of the room in feet?"));
+//     const oneGallonCoversSqFeet = 350;
+//     var totalSqFeet = lengthOfRoom * widthOfRoom;
+//     var paintGallonsNeeded = totalSqFeet / 2;
 
 
 
