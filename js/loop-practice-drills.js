@@ -17,23 +17,25 @@ var array1 = ["string", false, 100, 3, 15, "codeup"];
 //
 // Write a function, getOlder() that takes in array of dog objects and increases the value of the age properties by 1.
 //
-// Example input: [
-//     {
-//         name: "Chompers",
-//         breed: "Pug",
-//         age: 7
-//     },
-//     {
-//         name: "Freddy",
-//         breed: "Lab",
-//         age: 4
-//     },
-//     {
-//         name: "Mr. Pig",
-//         breed: "Mastif",
-//         age: 10
-//     }
-// ];
+// Example input:
+var dogs = [
+    {
+        name: "Chompers",
+        breed: "Pug",
+        age: 7
+    },
+    {
+        name: "Freddy",
+        breed: "Lab",
+        age: 4
+    },
+    {
+        name: "Mr. Pig",
+        breed: "Mastif",
+        age: 10
+    }
+];
+
 //
 // Example output: [
 //     {
@@ -52,32 +54,40 @@ var array1 = ["string", false, 100, 3, 15, "codeup"];
 //         age: 11
 //     }
 // ];
-
+function getOlder(dogs) {
+    for (var i = 0; i < dogs.length; i += 1) {
+        // dogs[i].age++;
+        dogs[i].age++;
+    }
+    return dogs;
+}
+console.log(getOlder(dogs));
 
 // ------------- PRACTICE 3
 //
 // Write a function, washCars() that takes in a array of car objects and sets the boolean properties of isDirty to false
 //
-// Example input: [
-//     {
-//         make: 'Volvo',
-//         color: 'red',
-//         year: 1996,
-//         isDirty: true
-//     },
-//     {
-//         make: 'Toyota',
-//         color: 'black',
-//         year: 2004,
-//         isDirty: false
-//     },
-//     {
-//         make: 'Ford',
-//         color: 'white',
-//         year: 2007,
-//         isDirty: true
-//     }
-// ]
+// Example input:
+var cars = [
+    {
+        make: 'Volvo',
+        color: 'red',
+        year: 1996,
+        isDirty: true
+    },
+    {
+        make: 'Toyota',
+        color: 'black',
+        year: 2004,
+        isDirty: false
+    },
+    {
+        make: 'Ford',
+        color: 'white',
+        year: 2007,
+        isDirty: true
+    }
+]
 //
 // Example output:
 //     [
@@ -100,25 +110,39 @@ var array1 = ["string", false, 100, 3, 15, "codeup"];
 //             isDirty: false // changed to false
 //         }
 //     ]
-//
+
+function washCars(cars) {
+    for (i = 0; i < cars.length; i += 1) {
+        if (cars[i].isDirty === true) {
+            cars[i].isDirty = false;
+        }
+    }
+    return cars;
+}
+console.log(washCars(cars));
+
 // ------------- PRACTICE 4
 //
-// Write a function, adminList() that takes in an array of user objects and returns a count of all admins based on the isAdmin property. Refactor to return an array of admin-only user emails. Refactor again to return an array of user objects that are admins.
+// Write a function, adminList() that takes in an array of user objects
+// and returns a count of all admins based on the isAdmin property.
+// Refactor to return an array of admin-only user emails.
+// Refactor again to return an array of user objects that are admins.
 //
-//     Example Input: [
-//     {
-//         isAdmin: true,
-//         email: 'user1@email.com'
-//     },
-//     {
-//         isAdmin: true,
-//         email: 'user2@email.com'
-//     }
-//     {
-//         isAdmin: false,
-//         email: 'user3@email.com'
-//     }
-// ];
+//     Example Input:
+var users = [
+    {
+        isAdmin: true,
+        email: 'user1@email.com'
+    },
+    {
+        isAdmin: true,
+        email: 'user2@email.com'
+    }
+    {
+        isAdmin: false,
+        email: 'user3@email.com'
+    }
+];
 //
 // Example Output (before refactor): 2
 //
