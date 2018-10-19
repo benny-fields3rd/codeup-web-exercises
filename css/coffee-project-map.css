@@ -7,7 +7,7 @@ body {
 }
 #map {
     min-width: 200px;
-    width: 50%;
+    width: 100%;
     min-height: 200px;
     height: 80%;
     border: 1px solid blue;
