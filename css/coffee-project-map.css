@@ -1,0 +1,18 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+#map {
+    min-width: 200px;
+    width: 50%;
+    min-height: 200px;
+    height: 80%;
+    border: 1px solid blue;
+}
+
+a {
+    text-decoration: none;
+}
