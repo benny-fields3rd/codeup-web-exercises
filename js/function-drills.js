@@ -34,7 +34,7 @@ console.log(identity(50));
 // Make a function named isFive(input)
 function isFive(input) {
     if(input === 5) {
-        return input + " is equal to 3!";
+        return input + " is equal to 5!";
     } else {
         return input + " is not equal to five!";
     }
@@ -166,7 +166,7 @@ console.log(isLowerCase("o"));
 
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
 function hasLowerCase(string) {
-    if (string !== string.toUpperCase() && string === string.toLowerCase()) {
+    if(string !== string.toUpperCase() && string === string.toLowerCase()) {
         return true;
     } else {
         return false;
@@ -182,7 +182,7 @@ function isSpace(letter) {
         return "There are no spaces in this input."
     }
 }
-console.log(isSpace("This is a test."));
+console.log(isSpace("tisisatest"));
 
 // Make a function named isZero(number)
 function isZero(number) {
@@ -201,9 +201,9 @@ function isNotZero(number) {
 console.log(isNotZero(7));
 
 // Write a function named lowerCase(string)
-function lowerCase(string) {
-    return ;
-}
+// function lowerCase(string) {
+//     if (sting === ) ;
+// }
 // Write a function named double(n) that returns a number times two
 function double(n) {
     return parseFloat(n * 2);
@@ -279,15 +279,15 @@ console.log(cubeRoot(9));
 // Write a function named invertSign(number) that returns a negative version of a positive number,
 // a positive version of negative, and false for all else.
 function invertSign(number) {
-    if(number = number * -1) {
+    if(number *= -1) {
         return number;
-    } else if(number = number * 1) {
+    } else if(number *= 1) {
         return number;
     } else {
         return false;
     }
 }
-console.log(invertSign("a"));
+console.log(invertSign(8));
 
 // Write a function named degreesToRadians(number)
 function degreesToRadians(number) {

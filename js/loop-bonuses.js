@@ -25,7 +25,7 @@ var toggleCase = function(str) {
     }
     str = letters.join("");
     console.log(str);
-}
+};
 var text = "Codeup is very challenging!";
 toggleCase(text);
 
