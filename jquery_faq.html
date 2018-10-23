@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery FAQ Exercise</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
+
+        <style>
+            .invisible {
+                display: none;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>10 FAQs about National Parks</h1>
+        <dl> <!-- fix why this doesn't display indented as it should -->
+            <dt>Random Fact 1</dt>
+            <dd class="invisible">Black hot drink</dd>
+            <dt>Random Fact 2</dt>
+            <dd class="invisible">Black hot drink</dd>
+            <dt>Random Fact 3</dt>
+            <dd class="invisible">Black hot drink</dd>
+            <dt>Random Fact 4</dt>
+            <dd class="invisible">Black hot drink</dd>
+            <dt>Random Fact 5</dt>
+            <dd class="invisible">Black hot drink</dd>
+            <dt>Random Fact 6</dt>
+            <dd class="invisible">Black hot drink</dd>
+            <dt>Random Fact 7</dt>
+            <dd class="invisible">Black hot drink</dd>
+            <dt>Random Fact 8</dt>
+            <dd class="invisible">Black hot drink</dd>
+            <dt>Random Fact 9</dt>
+            <dd class="invisible">Black hot drink</dd>
+            <dt>Random Fact 10</dt>
+            <dd class="invisible">Black hot drink</dd>
+        </dl>
+
+        <button class="btn btn-default">Show Facts!</button>
+
+        <script src="js/jquery.js"></script>
+        <script>
+            "use strict";
+            $(document).ready(function () {
+                // Function that when clicked, all dd elements disappear
+                $('.btn').click(function () {
+                    $('dd').toggleClass('invisible');
+                });
+                // bonus clikc on dt elements and hilight it a color
+                $('dt').click(function () {
+                    $(this).css('background-color', 'green');
+                });
+            });
+        </script>
+    </body>
+</html>
