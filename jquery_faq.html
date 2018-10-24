@@ -19,6 +19,15 @@
 
     </head>
     <body>
+        <div class="alert alert-warning alert-dismissible" id="timeHeading" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2><strong>Hello!</strong> Please register for the site.</h2>
+        </div>
+
+    <div id="newsletter">
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span>X</span>
+    </div>
         <h1>10 FAQs about National Parks</h1>
         <dl> <!-- fix why this doesn't display indented as it should -->
             <dt>Ten Random Facts</dt>
@@ -105,6 +114,23 @@
                 $('li').click(function () {
                     $(this).parent().children().first().css('color', 'blue');
                 });
+
+                // At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up
+                // for our newsletter?" and a span that has an 'x' in it.
+                // When the 'x' is clicked, hide the entire div element.
+                $('#newsletter').click(function () {
+                    $(this).hide();
+                });
+                // The uls next to each h3 that contain facts about each park should start out hidden, and when the
+                // corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
+                $('ul').hide();
+
+                $('h3').click(function () {
+                    $(this).next().slideDown();
+                });
+                // After the user has been on the page for 8 seconds, an h2 should fade in that asks the user to
+                // register for the site.
+                $('#timeHeading').hide(0).delay(8000).fadeIn(2000);
             });
         </script>
     </body>
