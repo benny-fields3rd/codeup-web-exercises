@@ -21,41 +21,89 @@
     <body>
         <h1>10 FAQs about National Parks</h1>
         <dl> <!-- fix why this doesn't display indented as it should -->
-            <dt>Random Fact 1</dt>
+            <dt>Ten Random Facts</dt>
             <dd class="invisible">Black hot drink</dd>
-            <dt>Random Fact 2</dt>
             <dd class="invisible">Black hot drink</dd>
-            <dt>Random Fact 3</dt>
+            <dt>Ten Random Facts</dt>
             <dd class="invisible">Black hot drink</dd>
-            <dt>Random Fact 4</dt>
             <dd class="invisible">Black hot drink</dd>
-            <dt>Random Fact 5</dt>
+            <dt>Ten Random Facts</dt>
             <dd class="invisible">Black hot drink</dd>
-            <dt>Random Fact 6</dt>
             <dd class="invisible">Black hot drink</dd>
-            <dt>Random Fact 7</dt>
+            <dt>Ten Random Facts</dt>
             <dd class="invisible">Black hot drink</dd>
-            <dt>Random Fact 8</dt>
             <dd class="invisible">Black hot drink</dd>
-            <dt>Random Fact 9</dt>
+            <dt>Ten Random Facts</dt>
             <dd class="invisible">Black hot drink</dd>
-            <dt>Random Fact 10</dt>
             <dd class="invisible">Black hot drink</dd>
         </dl>
 
-        <button class="btn btn-default">Show Facts!</button>
+        <h3 id="national-parks-heading1">National Parks</h3>
+        <ul id="national-parks1">
+            <li>Arches</li>
+            <li>Badlands</li>
+            <li>Carlsbad Caverns</li>
+            <li>Denali</li>
+            <li>Everglades</li>
+        </ul>
+
+        <h3>State Parks of Texas</h3>
+        <ul id="state-parks-texas">
+            <li>Abilene</li>
+            <li>Big Bend</li>
+            <li>Choke Canyon</li>
+            <li>Davis Mountains</li>
+            <li>Enchanted Rock</li>
+        </ul>
+
+        <h3 id="national-parks-heading2">National Parks2</h3>
+        <ul id="national-parks2">
+            <li>Arches</li>
+            <li>Badlands</li>
+            <li>Carlsbad Caverns</li>
+            <li>Denali</li>
+            <li>Everglades</li>
+        </ul>
+
+        <button class="btn btn-default" id="btn">Show Facts!</button>
 
         <script src="js/jquery.js"></script>
+
         <script>
-            "use strict";
+
             $(document).ready(function () {
+                "use strict";
                 // Function that when clicked, all dd elements disappear
-                $('.btn').click(function () {
+                $('.btn-default').click(function () {
                     $('dd').toggleClass('invisible');
                 });
-                // bonus clikc on dt elements and hilight it a color
+                // bonus click on dt elements and highlight it a color`
                 $('dt').click(function () {
-                    $(this).css('background-color', 'green');
+                    $(this).css('background-color', 'yellow');
+                });
+                //Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an
+                // h3 element, and a ul of 4 facts about the park.
+
+
+                // Create a button that, when clicked, makes the last li in each ul have a yellow background.
+                $('.btn').click(function () {
+                    // my way
+                    // $('li').next().next().next().next().css('background-color', '#FF0');
+                    // Justin's solution (MUCH BETTER)
+                    $('ul').each(function (i, element) {
+                        $(element).children().last().css('background-color', '#FF0');
+                    })
+                });
+
+                // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve
+                // this.
+                $('h3').click(function () {
+                    $(this).next().children().css('font-weight', 'bold');
+                });
+
+                // When any list item is clicked, first li of the parent ul should have a font color of blue.
+                $('li').click(function () {
+                    $(this).parent().children().first().css('color', 'blue');
                 });
             });
         </script>
