@@ -25,8 +25,7 @@
         </div>
 
     <div id="newsletter">
-        <h1>Would you like to sign up for our newsletter?</h1>
-        <span>X</span>
+        <h1>Would you like to sign up for our newsletter? <span>X</span></h1>
     </div>
         <h1>10 FAQs about National Parks</h1>
         <dl> <!-- fix why this doesn't display indented as it should -->
@@ -121,12 +120,13 @@
                 $('#newsletter').click(function () {
                     $(this).hide();
                 });
+
                 // The uls next to each h3 that contain facts about each park should start out hidden, and when the
                 // corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
                 $('ul').hide();
 
                 $('h3').click(function () {
-                    $(this).next().slideDown();
+                    $(this).next().slideToggle();
                 });
                 // After the user has been on the page for 8 seconds, an h2 should fade in that asks the user to
                 // register for the site.
