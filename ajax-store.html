@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table class="table table-striped table-dark table-hover" id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button id="update-button">Update Button</button>
+
+<script src="js/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+(function() {
+
+    "use strict";
+
+    // TODO: Create an ajax GET request for /data/inventory.json
+    function getData() {
+        $.ajax("data/inventory.json").done(function (data) {
+            // console.log(data);
+            // console.log(buildHTML(data));
+            $('#insertProducts').html(buildHTML(data));
+        });
+    }
+    getData();
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    function buildHTML(data) {
+        var infoHTML = "";
+        data.forEach(function(data) {
+            infoHTML += "<tr>";
+            infoHTML += "<td>" + data.title + "</td>";
+            infoHTML += "<td>" + data.quantity + "</td>";
+            infoHTML += "<td>" + data.price + "</td>";
+            infoHTML += "<td>" + data.categories + "</td>";
+            infoHTML += "</tr>";
+        });
+        return infoHTML;
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+    }
+
+    $('#update-button').click(function () {
+        getData()
+    });
+
+
+
+    // my solution
+    // $('#update-btn').click(function () {
+    //     // adds ul when button is clicked
+    //     $('#names-list').html('<ul></ul>'); // may be a way to add ul and names all at one?
+    // }
+    //     // Using .each, goes through each object
+    //     $.each(people, function (i, value) {
+    //         // adds li's and names to ul
+    //         $('ul').append('<li>' + people[i].name + '</li>');
+    //     });
+    // });
+})();
+</script>
+
+</body>
+</html>
