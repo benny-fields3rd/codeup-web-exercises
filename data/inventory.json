@@ -11,7 +11,7 @@
         "quantity": 5,
         "categories": [
             "tool",
-            "powered"
+            " powered"
         ],
         "price": 100
     }, {
@@ -19,8 +19,8 @@
         "quantity": 5,
         "categories": [
             "tool",
-            "gas",
-            "outdoor"
+            " gas",
+            " outdoor"
         ],
         "price": 200
     }, {
@@ -36,10 +36,57 @@
         "quantity": 1,
         "categories": [
             "tool",
-            "gas",
-            "outdoor"
+            " gas",
+            " outdoor"
         ],
         "price": 700
+    },
+    {
+        "title": "Tool Chest",
+        "quantity": 1,
+        "categories": [
+            "tool storage"
+        ],
+        "price": 300
+    }, {
+    "title": "Table Saw",
+    "quantity": 1,
+    "categories": [
+        "tool",
+        " powered"
+    ],
+    "price": 400
+}, {
+    "title": "Garden Hose",
+    "quantity": 1,
+    "categories": [
+        "outdoor",
+        " garden"
+    ],
+    "price": 20
+}, {
+    "title": "Wood Screws",
+    "quantity": 25,
+    "categories": [
+        "tool"
+    ],
+    "price": 10
+},
+    {
+        "title": "Tool Pouch",
+        "quantity": 1,
+        "categories": [
+            "accessory"
+        ],
+        "price": 15
+    },
+    {
+        "title": "Mulch",
+        "quantity": 12,
+        "categories": [
+            "garden",
+            " outdoor"
+        ],
+        "price": 150
     }
-
 ]

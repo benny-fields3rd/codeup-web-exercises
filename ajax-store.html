@@ -3,9 +3,10 @@
     <head>
         <title>Online Store</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/ajax-store.css">
     </head>
     <body>
-    <div id="main-container">
+    <div class="conatiner-fluid" id="main-container">
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Grady's Tool Store</a>
@@ -44,45 +45,59 @@
         </nav>
         <!-- Jumbotron -->
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">
+            <div class="container text-center text-light">
                 <h1 class="display-4">Grady's Tool Store</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <p class="lead">Where deals on tools occur every day!</p>
             </div>
         </div>
-        <div class="card" style="width: 100rem;">
-            <h1>Purchases</h1>
-
-            <table class="table table-striped table-dark table-hover" id="products">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Categories</th>
-                    </tr>
-                </thead>
-                <tbody id="insertProducts"></tbody>
-            </table>
-            <button id="update-button">Update Button</button>
+        <div class="card text-center card-responsive mx-auto" style="width: 80rem;">
+            <div class="card-header">
+                Purchase Inquiry
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">List of Purchases</h4>
+                <table class="table table-striped table-dark table-hover" id="products">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Categories</th>
+                        </tr>
+                    </thead>
+                    <tbody id="insertProducts"></tbody>
+                </table>
+                <a class="btn btn-primary text-light" id="update-button">Update Button</a>
+            </div>
+            <div class="card-footer text-muted">
+                Thank you for your business! Please come again!
+            </div>
         </div>
     </div>
+
         <script src="js/jquery.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                crossorigin="anonymous">
+        </script>
         <script>
         (function() {
 
             "use strict";
 
             // TODO: Create an ajax GET request for /data/inventory.json
+            // AJAX request inside created function
             function getData() {
                 $.ajax("data/inventory.json").done(function (data) {
                     // console.log(data);
-                    // console.log(buildHTML(data));
-                    $('#insertProducts').html(buildHTML(data));
+                    $('#insertProducts').html(buildHTML(data)); // calling buildHTML function
                 });
             }
-            getData();
+            getData(); // calling getData function
 
             // TODO: Take the data from inventory.json and append it to the products table
             //       HINT: Your data should come back as a JSON object; use console.log() to inspect
@@ -100,10 +115,11 @@
                 return infoHTML;
                 //       HINT: You will want to target #insertProducts for your new HTML elements
             }
-
+            // function for event listener button
             $('#update-button').click(function () {
                 getData()
             });
+
 
 
 
