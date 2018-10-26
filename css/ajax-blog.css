@@ -1,0 +1,13 @@
+#whiteSands {
+    width: 100%;
+}
+.jumbotron {
+    background-image: url("../img/sunset-purple.jpg");
+}
+#share-buttons img {
+    width: 35px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 0;
+    display: inline;
+}
