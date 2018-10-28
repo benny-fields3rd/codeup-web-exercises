@@ -1,11 +1,33 @@
-.card {
 
+.container {
+    width: 100%;
+    height: auto;
+    padding: 1em;
+}
+.main-header {
+    /*font-family: 'Luckiest Guy', cursive;*/
+    /*font-family: 'Titan One', cursive;*/
+    /*font-family: 'Notable', sans-serif;*/
+    font-family: 'Bungee Inline', cursive;
+}
+#city {
+    font-family: 'Titan One', cursive;
+}
+.weatherCategory {
+    font-weight: bold;
 }
 
 #map {
-    height: 100%;
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    padding: 2em;
 }
 
+.weather-icon {
+    width: 200%;
+    height: auto;
+}
 
 
 
