@@ -254,7 +254,31 @@ getWeather();
     // values of the marker to the Weather API request function
 
 
+    var markerLat;
+    var markerLng;
 
+    marker.addListener('dragend', function () {
+        markerLat = marker.getPosition().lat();
+        markerLng = marker.getPosition().lng();
+
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/forecast",
+            type: "GET",
+            data: {
+                APPID: "c622ec1ca034b8afac941b07ce7b12b8",
+                lat: markerLat,
+                lon: markerLng,
+                units: "imperial"
+            }
+        }).done(function(data) {
+            console.log(data);
+            updateCity(data);
+            // console.log(getMinMaxDayTemp(data, 1));
+            // console.log(getWeatherDay1(data));
+        });
+        function updateCity() {
+            $("#city-name").html(data.city.name + " " + data.city.country);
+        }
 
 
 

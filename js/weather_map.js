@@ -22,18 +22,20 @@ $(document).ready(function() {
 
     // make a function to get the weather object from the OpenWeatherMap API
     // base url should be "http://api.openweathermap.org/data/2.5/forecast"
-    function getWeather(){
+
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "c622ec1ca034b8afac941b07ce7b12b8",
-            id:     "4726206",
-            units: "imperial",
+            q:     "Dallas, US",
+            units: "imperial"
         }).done(function(data) {
             console.log(data);
             // console.log(getMinMaxDayTemp(data, 1));
-            $('#city1').html(getWeatherDay1(data)); // calling getWeatherDay1 function
+            $('#daysWeather').html(getWeatherDay1(data));// calling getWeatherDay1 function
+            updateCity(data)
         });
+    function updateCity(data) {
+        $("#city-name").html(data.city.name + " " + data.city.country);
     }
-    getWeather();
 
     // write html and css to make/style a three-day forecast set of divs (may use design from curriculum)
     function getWeatherDay1(data) {
@@ -62,8 +64,10 @@ $(document).ready(function() {
 
 // CREATE THE MAP
         // using syntax from the previous Maps exercise, add a map below the OpenWeatherMap forecast
-        "use strict";
+
     var myLatlng = new google.maps.LatLng(29.5186519,-98.508089);
+    var markerLat;
+    var markerLng;
 
     var mapOptions = {
         zoom: 4.2,
@@ -82,10 +86,26 @@ $(document).ready(function() {
         draggable:true,
         title:"Drag me!"
     });
-    google.maps.event.addListener(marker, 'dragend', function (event) {
-        console.log().value = event.latLng.lat();
-        document.getElementById("long").value = event.latLng.lng();
-        infoWindow.open(map, marker);
+    marker.addListener('dragend', function () {
+        markerLat = marker.getPosition().lat();
+            // console.log(markerLat);
+        markerLng = marker.getPosition().lng();
+        // console.log(markerLng);
+        $.ajax({
+            url: "http://api.openweathermap.org/data/2.5/forecast",
+            type: "GET",
+            data: {
+                APPID: "c622ec1ca034b8afac941b07ce7b12b8",
+                lat: markerLat,
+                lon: markerLng,
+                units: "imperial"
+            }
+        }).done(function(data) {
+            console.log(data);
+            // console.log(getMinMaxDayTemp(data, 1));
+            $('#daysWeather').html(getWeatherDay1(data));
+            updateCity(data);
+        });
     });
 });
 // MAKE THE WEATHER FORECAST
