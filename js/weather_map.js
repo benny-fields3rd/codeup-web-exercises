@@ -25,7 +25,7 @@ $(document).ready(function() {
 
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: "c622ec1ca034b8afac941b07ce7b12b8",
-            q:     "Dallas, US",
+            id:     "4726206",
             units: "imperial"
         }).done(function(data) {
             console.log(data);
@@ -33,28 +33,32 @@ $(document).ready(function() {
             $('#daysWeather').html(getWeatherDay1(data));// calling getWeatherDay1 function
             updateCity(data)
         });
+
     function updateCity(data) {
-        $("#city-name").html(data.city.name + " " + data.city.country);
+        $("#city-name").html(data.city.name + ", " + data.city.country);
     }
 
     // write html and css to make/style a three-day forecast set of divs (may use design from curriculum)
     function getWeatherDay1(data) {
         var html = "";
+        var today = new Date();
+
         for(var i = 0; i < 3; i += 1) {
+            var nextDay = new Date(today.getFullYear(), today.getMonth(), today.getDate() + i);
+            nextDay = nextDay.toString();
             var temps = getMinMaxDayTemp(data, i + 1);
             // build html elements
             html += '<div class="col s12 m4">';
             html += '<div class="card blue-grey darken-1 z-depth-2 hoverable">';
             html += '<div class="card-content white-text">';
+            html += '<div id="day">' + nextDay.substring(0, 10) + '</div>';
+            html += '<hr>';
             html += '<span class="card-title">' + "High " + temps.max.toFixed(0) + '&deg' + "/ " + "Low " + temps.min.toFixed(0) + '&deg' + '</span>';
             html += '<img src="http://openweathermap.org/img/w/' + data.list[i * 8].weather[0].icon + '.png">';
             html += '<p><span class="weatherCategory">Clouds: </span>' + data.list[i * 8].weather[0].description + '</p>';
             html += '<p><span class="weatherCategory">Humidity: </span>' + data.list[i * 8].main.humidity + '%</p>';
             html += '<p><span class="weatherCategory">Wind: </span>' + data.list[i * 8].wind.speed + " mph" + '</p>';
             html += '<p><span class="weatherCategory">Pressure: </span>' + data.list[i * 8].main.pressure + '</p>';
-            html += '</div>';
-            html += '<div class="card-action">';
-            html += '<a class="waves-effect waves-teal btn-flat">Refresh</a>';
             html += '</div>';
             html += '</div>';
             html += '</div>';
@@ -70,8 +74,10 @@ $(document).ready(function() {
     var markerLng;
 
     var mapOptions = {
-        zoom: 4.2,
+        zoom: 4.5,
         center: myLatlng,
+        scrollWheel: true,
+        disableDefaultUI: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
     }
 
@@ -91,21 +97,32 @@ $(document).ready(function() {
             // console.log(markerLat);
         markerLng = marker.getPosition().lng();
         // console.log(markerLng);
-        $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/forecast",
-            type: "GET",
-            data: {
-                APPID: "c622ec1ca034b8afac941b07ce7b12b8",
-                lat: markerLat,
-                lon: markerLng,
-                units: "imperial"
-            }
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+            APPID: "c622ec1ca034b8afac941b07ce7b12b8",
+            lat: markerLat,
+            lon: markerLng,
+            units: "imperial"
         }).done(function(data) {
-            console.log(data);
+            // console.log(data);
             // console.log(getMinMaxDayTemp(data, 1));
-            $('#daysWeather').html(getWeatherDay1(data));
-            updateCity(data);
+            $('#daysWeather').html(getWeatherDay1(data));// calling getWeatherDay1 function
+            updateCity(data)
         });
+        // $.ajax({
+        //     url: "http://api.openweathermap.org/data/2.5/forecast",
+        //     type: "GET",
+        //     data: {
+        //         APPID: "c622ec1ca034b8afac941b07ce7b12b8",
+        //         lat: markerLat,
+        //         lon: markerLng,
+        //         units: "imperial"
+        //     }
+        // }).done(function(data) {
+            // console.log(data);
+            // console.log(getMinMaxDayTemp(data, 1));
+        //     $('#daysWeather').html(getWeatherDay1(data));
+        //     updateCity(data);
+        // });
     });
 });
 // MAKE THE WEATHER FORECAST
@@ -153,3 +170,16 @@ $(document).ready(function() {
 
 // WIRE UP MAP TO WEATHER API
     // add the function call that makes the Weather API request to the marker drag event and pass in the lat and lon values of the marker to the Weather API request function
+// BONUS from Justin
+// - allow the user to search by place name, then move the map to that location and update the weather (will need to make a geocoding request,
+// then use the results of the geocoding request in a call to the open weather api)
+
+// - allow users to specify how many days they want a forecast for (e.g. users can specify if they want just today’s weather, a 2-day forecast,
+// a 3-day forecast, a 5-day forecast etc.)
+
+// - use a google maps info window to display the current weather conditions above the marker for the place
+
+// - allow users to choose how much detail they want in their forecast (just the high and low for the day? do they also want to see an icon?
+// wind speed, humidity, etc)
+
+// - when a geocoding request is made, google responds with a list of places (starting with the closest match). When the user searches for a location, show them all the results for that location in a `select` element, and when they change the `select`, update the map and the displayed weather accordingly

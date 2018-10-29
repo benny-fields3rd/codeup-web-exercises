@@ -1,7 +1,7 @@
 .container {
     width: 100%;
-    height: auto;
-    padding: 1em;
+    height: 100%;
+    /*padding: 1em;*/
 }
 .main-header {
     /*font-family: 'Luckiest Guy', cursive;*/
@@ -9,7 +9,7 @@
     /*font-family: 'Notable', sans-serif;*/
     font-family: 'Bungee Inline', cursive;
 }
-#city {
+#city-name {
     font-family: 'Titan One', cursive;
 }
 .weatherCategory {
@@ -21,10 +21,7 @@
     margin: 0;
     padding: 2em;
 }
-.weather-icon {
-    width: 200%;
-    height: auto;
-}
+img{ width: 100px; }
 
 
 
