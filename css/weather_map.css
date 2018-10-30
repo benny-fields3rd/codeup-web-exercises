@@ -3,11 +3,14 @@
     height: 100%;
     /*padding: 1em;*/
 }
-.main-header {
+.main-header  {
     /*font-family: 'Luckiest Guy', cursive;*/
     /*font-family: 'Titan One', cursive;*/
     /*font-family: 'Notable', sans-serif;*/
     font-family: 'Bungee Inline', cursive;
+}
+.search-address {
+    font-family: 'Luckiest Guy', cursive;
 }
 #city-name {
     font-family: 'Titan One', cursive;
@@ -20,9 +23,17 @@
     height: 450px;
     margin: 0;
     padding: 2em;
+    border-radius: 25px;
 }
-img{ width: 100px; }
+img {
+    width: 100px;
+}
 
+.card, .btn{
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, steelblue, #23272b);
+}
 
-
-
+h2 {
+    text-shadow: 4px 4px 5px deepskyblue;
+}

@@ -2,22 +2,36 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Weather Map Exercise</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Codeup Weather Map Exercise</title>
+        <!-- Google Fonts Script -->
         <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Luckiest+Guy|Notable|Titan+One" rel="stylesheet">
+        <!-- Materialize CSS Scripts -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+        <!-- Custom CSS Scripts -->
         <link rel="stylesheet" href="css/weather_map.css">
     </head>
     <body class="light-blue accent-1">
+        <!-- container -->
         <div class="container light-blue accent-1">
-            <div class="center main-header"><h2>Benny's Codeup Weather Application</h2></div>
+            <div class="center main-header" id="codeup"><h2>Benny's Codeup Weather Application</h2></div>
+
+            <!-- Search Address Input -->
+            <div class="center">
+                <h5><span class="search-address">Type in address: </span><input type="text" id="address-input"></h5>
+                <button class="btn light-blue darken-3 waves-effect waves-light hoverable pulse" type="submit" name="action">Search Address
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+            <div id="map-canvas"></div>
+
             <div class="center"><h3 id="city-name"></h3></div>
+
 
             <!-- weather cards -->
             <div class="row center">
-
               <div id="daysWeather"></div>
-              <!--<div id="city3"></div>-->
             </div> <!-- close row -->
 
             <!-- Google Map -->
@@ -28,13 +42,13 @@
             </div> <!-- close map row -->
         </div> <!-- close container -->
 
-    <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
-    <!-- HIDE KEY BEFORE PUSHING TO GIT!!!!! -->
+        <!-- Google Maps API script -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXOnfAv0O43uduLKui_u6EOTV32kA7mM8"></script>
-        <!--[Your_API_key_goes_here!]-->
+        <!-- jQuery script -->
         <script src="js/jquery.js"></script>
-    <!-- Compiled JavaScript -->
+        <!-- Compiled JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+        <!-- Custom JavaScript -->
         <script src="js/weather_map.js"></script>
     </body>
 </html>

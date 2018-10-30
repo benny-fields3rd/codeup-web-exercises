@@ -1,6 +1,7 @@
-"use strict";
+
 
 $(document).ready(function() {
+    "use strict";
 
 // MAKE THE WEATHER FORECAST
     /**
@@ -49,9 +50,9 @@ $(document).ready(function() {
             var temps = getMinMaxDayTemp(data, i + 1);
             // build html elements
             html += '<div class="col s12 m4">';
-            html += '<div class="card blue-grey darken-1 z-depth-2 hoverable">';
+            html += '<div class="card blue-grey darken-1 z-depth-4 hoverable">';
             html += '<div class="card-content white-text">';
-            html += '<div id="day">' + nextDay.substring(0, 10) + '</div>';
+            html += '<div class="weatherCategory" id="day">' + nextDay.substring(0, 10) + '</div>';
             html += '<hr>';
             html += '<span class="card-title">' + "High " + temps.max.toFixed(0) + '&deg' + "/ " + "Low " + temps.min.toFixed(0) + '&deg' + '</span>';
             html += '<img src="http://openweathermap.org/img/w/' + data.list[i * 8].weather[0].icon + '.png">';
@@ -67,8 +68,7 @@ $(document).ready(function() {
     }
 
 // CREATE THE MAP
-        // using syntax from the previous Maps exercise, add a map below the OpenWeatherMap forecast
-
+    // add a map below the OpenWeatherMap forecast
     var myLatlng = new google.maps.LatLng(29.5186519,-98.508089);
     var markerLat;
     var markerLng;
@@ -108,24 +108,33 @@ $(document).ready(function() {
             $('#daysWeather').html(getWeatherDay1(data));// calling getWeatherDay1 function
             updateCity(data)
         });
-        // $.ajax({
-        //     url: "http://api.openweathermap.org/data/2.5/forecast",
-        //     type: "GET",
-        //     data: {
-        //         APPID: "c622ec1ca034b8afac941b07ce7b12b8",
-        //         lat: markerLat,
-        //         lon: markerLng,
-        //         units: "imperial"
-        //     }
-        // }).done(function(data) {
-            // console.log(data);
-            // console.log(getMinMaxDayTemp(data, 1));
-        //     $('#daysWeather').html(getWeatherDay1(data));
-        //     updateCity(data);
-        // });
     });
+
+    // function getCurrentWeather(data) {
+    //         var currentWeather = '<div id="content"'+
+    //          '<div id="current-weather">'+
+    //         '<span class="current-weatherTitle">' + "High " + getMinMaxDayTemp(data, 3).max.toFixed(0) + '&deg' + "/ " + "Low " + getMinMaxDayTemp(data, 3).min.toFixed(0) + '&deg' + '</span>'+
+    //         '<img class="weather-icon" src="http://openweathermap.org/img/w/' + data.list[16].weather[0].icon + '.png">'+
+    //         '<p><span class="weatherCategory">Clouds: </span>' + data.list[16].weather[0].description + '</p>'+
+    //         '<p><span class="weatherCategory">Humidity: </span>' + data.list[16].main.humidity + '%</p>'+
+    //         '<p><span class="weatherCategory">Wind: </span>' + data.list[16].wind.speed + " mph" + '</p>'+
+    //         '<p><span class="weatherCategory">Pressure: </span>' + data.list[16].main.pressure + '</p>'+
+    //         '</div>'+
+    //         '</div>';
+    //         return currentWeather;
+    // }
+    //
+    // var infowindow = new google.maps.InfoWindow({
+    //     content: getCurrentWeather()
+    // });
+    //
+    // marker.addListener('click', function() {
+    //     infowindow.open(map, marker);
+    // });
+
+
 });
-// MAKE THE WEATHER FORECAST
+// MAKE THE WEATHER FORECAST INSTRUCTIONS
 
     // make a function to get the weather object from the OpenWeatherMap API
     // base url should be "http://api.openweathermap.org/data/2.5/forecast"
@@ -170,6 +179,7 @@ $(document).ready(function() {
 
 // WIRE UP MAP TO WEATHER API
     // add the function call that makes the Weather API request to the marker drag event and pass in the lat and lon values of the marker to the Weather API request function
+
 // BONUS from Justin
 // - allow the user to search by place name, then move the map to that location and update the weather (will need to make a geocoding request,
 // then use the results of the geocoding request in a call to the open weather api)
