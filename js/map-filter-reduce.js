@@ -99,23 +99,23 @@ console.log(averageYearsEx);
 
 
 // Justin's solution:
-// const longestEmail = users.reduce((prev, curr) => {
-//     if (prev.length < curr.email.length) { // prev is the start of the string..not object. Curr is the object
-//         return curr.email;
-//     } else {
-//         return prev;
-//     }
-// }, ""); // returning a string so us empty string ""
-// console.log(longestEmail);
-
-// Justin's simplified solution
 const longestEmail = users.reduce((prev, curr) => {
     if (prev.length < curr.email.length) { // prev is the start of the string..not object. Curr is the object
         return curr.email;
+    } else {
+        return prev;
     }
-    return prev;
 }, ""); // returning a string so us empty string ""
 console.log(longestEmail);
+
+// Justin's simplified solution
+// const longestEmail = users.reduce((prev, curr) => {
+//     if (prev.length < curr.email.length) { // prev is the start of the string..not object. Curr is the object
+//         return curr.email;
+//     }
+//     return prev;
+// }, ""); // returning a string so us empty string ""
+// console.log(longestEmail);
 
 // Use reduce to get the list of user's names in a single string.
 // Example: Your instructors are: ryan, luis, zach, fernando, justin.
